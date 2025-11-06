@@ -18,16 +18,14 @@ const (
 	RIGHT Input = "right"
 )
 
-var client mqtt.Client
-
-func publish(input Input) {
+func publish(input Input, client mqtt.Client) {
 	// 0 denotes minimum Quality of Service (QoS), fastest option
 	token := client.Publish("topic/control", 0, false, input)
 	token.Wait()
 	time.Sleep(time.Second)
 }
 
-func processKeystroke(key keys.Key) (stop bool, err error) {
+func processKeystroke(key keys.Key, client mqtt.Client) (stop bool, err error) {
 	switch key.Code {
 
 	// Exit on q
@@ -38,23 +36,17 @@ func processKeystroke(key keys.Key) (stop bool, err error) {
 
 	// Process keys
 	case keys.Up:
-		fmt.Printf("[INPUT] %s\n", UP)
-		publish(UP)
+		// inputChannel <- UP
 	case keys.Down:
-		fmt.Printf("[INPUT] %s\n", DOWN)
-		publish(DOWN)
+		// inputChannel <- DOWN
 	case keys.Left:
-		fmt.Printf("[INPUT] %s\n", LEFT)
-		publish(LEFT)
+		// inputChannel <- LEFT
 	case keys.Right:
-		fmt.Printf("[INPUT] %s\n", RIGHT)
-		publish(RIGHT)
+		// inputChannel <- RIGHT
 	}
 
 	return false, nil
 }
-
-// TODO -- Diagnose connection issues on localhost. perhaps try mosquitto_pub command?
 
 const BROKER_DNS = "localhost" // localhost for testing... switch to EC2 internal DNS name later
 const PORT = 1883
@@ -64,18 +56,18 @@ func main() {
 
 	opts.AddBroker(fmt.Sprintf("tcp://%s:%d", BROKER_DNS, PORT))
 	opts.SetClientID("boat_controller")
-	opts.SetUsername("boat")
-	opts.SetPassword("initbuild2025")
 	opts.OnConnect = func(client mqtt.Client) {
 		fmt.Println("Connected...")
 	}
 
-	client = mqtt.NewClient(opts)
+	client := mqtt.NewClient(opts)
 
 	if token := client.Connect(); token.Wait() && token.Error() != nil {
 		panic(token.Error())
 	}
 
 	fmt.Println("Taking input...")
-	keyboard.Listen(processKeystroke)
+	keyboard.Listen(func(key keys.Key) (stop bool, err error) {
+		return processKeystroke(key, client)
+	})
 }

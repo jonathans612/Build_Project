@@ -6,6 +6,6 @@ services:
     ports:
       - "1883:1883"
     volumes:
-      - ./mosquitto/config:/home/ubuntu/mosquitto/config
-      - ./mosquitto/data:/home/ubuntu/mosquitto/data
-      - ./mosquitto/log:/home/ubuntu/mosquitto/log
+      - ./mosquitto/config/:/mosquitto/config
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
