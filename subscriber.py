@@ -12,7 +12,7 @@ mqttc = mqtt_client.Client(mqtt_client.CallbackAPIVersion.VERSION2)
 mqttc.on_connect = on_connect
 mqttc.on_message = on_message
 
-mqttc.connect("192.168.93.191", 1883, 60)
+mqttc.connect("192.168.80.1", 1883, 60)
 
 print("Listening for arrow key events...")
 mqttc.loop_forever()
