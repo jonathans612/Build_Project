@@ -67,7 +67,7 @@ mqttc = mqtt_client.Client(mqtt_client.CallbackAPIVersion.VERSION2)
 mqttc.on_connect = on_connect
 mqttc.on_message = on_message
 
-mqttc.connect("192.168.80.1", 1883, 60)
+mqttc.connect("192.168.1.104", 1883, 60)
 
 keyboard_thread = threading.Thread(target=keyboard_listener, daemon=True)
 keyboard_thread.start()
