@@ -172,6 +172,16 @@ io.on('connection', (socket) => {
         if (socket.id === controller) {
         console.log('Joystick released by:', socket.id);
         }
+        client.publish(topic, `RUDDER set 0`, { qos: 0, retain: false }, (error) => {
+            if (error) {
+            console.error(error)
+            }
+        })
+        client.publish(topic, `MOTOR set 0`, { qos: 0, retain: false }, (error) => {
+            if (error) {
+            console.error(error)
+            }
+        })
     });
 
     const now = Date.now();
