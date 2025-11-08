@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Device Controller</title>
+    <script src="https://cdn.jsdelivr.net/npm/nipplejs@0.10.2/dist/nipplejs.min.js"></script>  
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            margin-top: 50px; 
+            background: #f9f9f9;
+        }
+        #your-id { 
+            font-family: monospace; 
+            background: #333; 
+            color: #0f0; 
+            padding: 10px 20px; 
+            border-radius: 8px; 
+            display: inline-block; 
+            margin: 10px;
+        }
+        .status { 
+            font-size: 18px; 
+            margin: 20px; 
+        }
+        #control-panel { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            display: inline-block; 
+            min-width: 400px;
+        }
+        button { 
+            padding: 20px 40px; 
+            font-size: 24px; 
+            cursor: pointer; 
+            background: #2196F3; 
+            color: white; 
+            border: none; 
+            border-radius: 10px; 
+            margin: 20px 10px;
+        }
+        #joystick-container { 
+            width: 250px; 
+            height: 250px; 
+            margin: 30px auto; 
+            background: #eee; 
+            border-radius: 50%; 
+            border: 6px solid #333;
+            position: relative;
+        }
+        #waiting { 
+            color: #e74c3c; 
+            font-weight: bold; 
+            font-size: 20px;
+        }
+        small { 
+            color: #777; 
+            display: block; 
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Device Control</h1>
+    <div id="your-id">Your ID: <span id="id-display">Connecting...</span></div>
+    <div class="status" id="status">Connecting...</div>
+
+    <div id="control-panel" style="display:none;">
+        <p style="color:green; font-weight:bold; font-size:22px;">You are in control</p>
+        <div id="button-container"></div>
+        <div id="joystick-container"></div>
+        <small>Move the joystick to control the device</small>
+    </div>
+
+    <div id="waiting" style="display:none;">
+        <p>Someone is already controlling the device</p>
+        <p>Waiting for them to disconnect... (no refresh needed)</p>
+        <p><strong>You are in position: <span id="queue-pos">?</span> in queue</strong></p>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+   <script>
+    const socket = io();
+
+    const controlPanel = document.getElementById('control-panel');
+    const waiting = document.getElementById('waiting');
+    const buttonContainer = document.getElementById('button-container');
+    const joystickContainer = document.getElementById('joystick-container');
+    const status = document.getElementById('status');
+    const idDisplay = document.getElementById('id-display');
+    const queuePos = document.getElementById('queue-pos');
+
+    let joystick = null;
+    let isController = false;
+    let lastJoystickSent = 0;
+    const JOYSTICK_THROTTLE_MS = 500; // 2 per second max
+
+    socket.on('your-id', (id) => {
+        idDisplay.textContent = id;
+    });
+
+    const createJoystick = () => {
+        if (joystick) joystick.destroy();
+
+        joystick = nipplejs.create({
+            zone: joystickContainer,
+            mode: 'static',
+            position: { left: '50%', top: '50%' },
+            color: '#2196F3',
+            size: 120
+        });
+
+        joystick.on('move', (evt, data) => {
+            if (!isController) return;
+
+            const now = Date.now();
+            if (now - lastJoystickSent < JOYSTICK_THROTTLE_MS) return; // Throttle
+
+            lastJoystickSent = now;
+
+            socket.emit('joystick-move', {
+                x: data.vector.x.toFixed(3),
+                y: -data.vector.y.toFixed(3),
+                force: data.force ? data.force.toFixed(3) : 0,
+                angle: data.angle.degree.toFixed(1)
+            });
+        });
+
+        joystick.on('end', () => {
+            if (!isController) return;
+
+            const now = Date.now();
+            if (now - lastJoystickSent >= JOYSTICK_THROTTLE_MS) {
+                lastJoystickSent = now;
+                socket.emit('joystick-end');
+            }
+        });
+    };
+
+    const showControl = () => {
+        controlPanel.style.display = 'inline-block';
+        waiting.style.display = 'none';
+        status.textContent = 'You have control';
+        status.style.color = 'green';
+        queuePos.textContent = '0';
+        isController = true;
+        lastJoystickSent = 0; // Reset throttle
+
+        buttonContainer.innerHTML = `<button id="rudder-left">Rudder Left 30°</button>`;
+        buttonContainer.innerHTML += `<button id="toggle-motor">Toggle Motor</button>`;
+        buttonContainer.innerHTML += `<button id="rudder-right">Rudder Right 30°</button>`;
+        document.getElementById('toggle-motor').onclick = () => {
+            socket.emit('toggle-motor');
+        };
+        document.getElementById('rudder-left').onclick = () => {
+            socket.emit('rudder-left');
+        };
+        document.getElementById('rudder-right').onclick = () => {
+            socket.emit('rudder-right');
+        };
+
+        createJoystick();
+    };
+
+    const showWaiting = () => {
+        controlPanel.style.display = 'none';
+        waiting.style.display = 'block';
+        buttonContainer.innerHTML = '';
+        status.textContent = 'Waiting for control...';
+        status.style.color = 'orange';
+        isController = false;
+        queuePos.textContent = '?';
+        if (joystick) {
+            joystick.destroy();
+            joystick = null;
+        }
+    };
+
+    socket.on('connect', () => {
+        socket.emit('request-control');
+    });
+
+    socket.on('control-granted', () => {
+        isController = true;
+        showControl();
+    });
+
+    socket.on('control-denied', showWaiting);
+    socket.on('control-released', () => socket.emit('request-control'));
+
+    socket.on('cheater-detected', () => {
+        alert('Cheating detected! Access revoked.');
+        showWaiting();
+    });
+
+    socket.on('rate-limited', () => {
+        alert('Too fast! Slow down.');
+    });
+
+    document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) {
+            socket.emit('request-control');
+        }
+    });
+
+    socket.emit('request-control');
+</script>
+</body>
+</html>
