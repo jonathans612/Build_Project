@@ -89,6 +89,7 @@ func main() {
 		return processKeystroke(key, inputBuffer)
 	})
 
+	client.Disconnect(250)
 	fmt.Println("Exiting keystroke listener")
 }
 
