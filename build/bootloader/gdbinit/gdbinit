@@ -1,0 +1,2 @@
+source /Users/tylerhebron/gtu7ArdDriver/build/bootloader/gdbinit/symbols
+source /Users/tylerhebron/gtu7ArdDriver/build/bootloader/gdbinit/connect
