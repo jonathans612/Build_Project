@@ -1,0 +1,9 @@
+.pio/
+.vscode/
+platformio.local.ini
+
+# Python specific
+__pycache__/
+*.pyc
+.venv/
+venv/
