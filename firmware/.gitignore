@@ -1,0 +1,5 @@
+# firmware/.gitignore
+# PlatformIO specific build files and user settings
+.pio/
+.vscode/
+platformio.local.ini
