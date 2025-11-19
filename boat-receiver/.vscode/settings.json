@@ -1,0 +1,14 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "sdkconfig.h": "c",
+        "freertos.h": "c",
+        "task.h": "c",
+        "format": "c",
+        "queue": "c",
+        "stack": "c",
+        "thread": "c",
+        "vector": "c",
+        "esp_netif.h": "c"
+    }
+}
