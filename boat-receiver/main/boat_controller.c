@@ -5,7 +5,6 @@
 
 void app_main(void)
 {
-    /* --- CONNECT TO WIFI --- */
     connect();
 
 }
