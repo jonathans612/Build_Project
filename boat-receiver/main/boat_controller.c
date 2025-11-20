@@ -5,6 +5,17 @@
 
 void app_main(void)
 {
-    connect();
+    /* --- IMPORTANT --- */
+    /*
+     *  In order to connect to eduroam, you need to supply your credentials.
+     *  Make sure you have wifi_login.h in this file's directory with two macros:
+     *      #define USER "your_username@fiu.edu"
+     *      #define PASS "your_password"
+     *  The connect() function will do the rest 
+     * 
+     */ 
+    
+     connect();
+
 
 }
