@@ -2,365 +2,20 @@
 ---
 events:
   -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/FindGit.cmake:111 (find_program)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/git_submodules.cmake:1 (find_package)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/idf.cmake:41 (include)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:29 (include)"
-      - "CMakeLists.txt:5 (include)"
-    mode: "program"
-    variable: "GIT_EXECUTABLE"
-    description: "Git command line client"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "git"
-    candidate_directories:
-      - "/home/lucas/esp/esp-idf/components/espcoredump/"
-      - "/home/lucas/esp/esp-idf/components/partition_table/"
-      - "/home/lucas/esp/esp-idf/components/app_update/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/"
-      - "/home/lucas/esp/esp-idf/tools/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    searched_directories:
-      - "/home/lucas/esp/esp-idf/components/espcoredump/git"
-      - "/home/lucas/esp/esp-idf/components/partition_table/git"
-      - "/home/lucas/esp/esp-idf/components/app_update/git"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/git"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/git"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/git"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/git"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/git"
-      - "/home/lucas/esp/esp-idf/tools/git"
-      - "/usr/local/sbin/git"
-      - "/usr/local/bin/git"
-    found: "/usr/bin/git"
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
-      - "CMakeLists.txt:8 (project)"
-    mode: "program"
-    variable: "CMAKE_UNAME"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "uname"
-    candidate_directories:
-      - "/home/lucas/esp/esp-idf/components/espcoredump/"
-      - "/home/lucas/esp/esp-idf/components/partition_table/"
-      - "/home/lucas/esp/esp-idf/components/app_update/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/"
-      - "/home/lucas/esp/esp-idf/tools/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/bin/"
-    searched_directories:
-      - "/home/lucas/esp/esp-idf/components/espcoredump/uname"
-      - "/home/lucas/esp/esp-idf/components/partition_table/uname"
-      - "/home/lucas/esp/esp-idf/components/app_update/uname"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/uname"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/uname"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/uname"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/uname"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/uname"
-      - "/home/lucas/esp/esp-idf/tools/uname"
-      - "/usr/local/sbin/uname"
-      - "/usr/local/bin/uname"
-    found: "/usr/bin/uname"
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
     kind: "message-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:207 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:228 (message)"
       - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
       - "CMakeLists.txt:8 (project)"
     message: |
       The target system is: Generic -  - 
-      The host system is: Linux - 6.17.8-2-cachyos - x86_64
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeNinjaFindMake.cmake:5 (find_program)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
-      - "CMakeLists.txt:8 (project)"
-    mode: "program"
-    variable: "CMAKE_MAKE_PROGRAM"
-    description: "Program used to build from build.ninja files."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "ninja-build"
-      - "ninja"
-      - "samu"
-    candidate_directories:
-      - "/home/lucas/esp/esp-idf/components/espcoredump/"
-      - "/home/lucas/esp/esp-idf/components/partition_table/"
-      - "/home/lucas/esp/esp-idf/components/app_update/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/"
-      - "/home/lucas/esp/esp-idf/tools/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    searched_directories:
-      - "/home/lucas/esp/esp-idf/components/espcoredump/ninja-build"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/ninja"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/samu"
-      - "/home/lucas/esp/esp-idf/components/partition_table/ninja-build"
-      - "/home/lucas/esp/esp-idf/components/partition_table/ninja"
-      - "/home/lucas/esp/esp-idf/components/partition_table/samu"
-      - "/home/lucas/esp/esp-idf/components/app_update/ninja-build"
-      - "/home/lucas/esp/esp-idf/components/app_update/ninja"
-      - "/home/lucas/esp/esp-idf/components/app_update/samu"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/ninja-build"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/ninja"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/samu"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/ninja-build"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/ninja"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/samu"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/ninja-build"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/ninja"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/samu"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/ninja-build"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/ninja"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/samu"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/ninja-build"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/ninja"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/samu"
-      - "/home/lucas/esp/esp-idf/tools/ninja-build"
-      - "/home/lucas/esp/esp-idf/tools/ninja"
-      - "/home/lucas/esp/esp-idf/tools/samu"
-      - "/usr/local/sbin/ninja-build"
-      - "/usr/local/sbin/ninja"
-      - "/usr/local/sbin/samu"
-      - "/usr/local/bin/ninja-build"
-      - "/usr/local/bin/ninja"
-      - "/usr/local/bin/samu"
-      - "/usr/bin/ninja-build"
-    found: "/usr/bin/ninja"
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompiler.cmake:115 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:67 (_cmake_find_compiler_path)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
-      - "CMakeLists.txt:8 (project)"
-    mode: "program"
-    variable: "CMAKE_C_COMPILER_WITH_PATH"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "xtensa-esp32-elf-gcc"
-    candidate_directories:
-      - "/home/lucas/esp/esp-idf/components/espcoredump/"
-      - "/home/lucas/esp/esp-idf/components/partition_table/"
-      - "/home/lucas/esp/esp-idf/components/app_update/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/"
-      - "/home/lucas/esp/esp-idf/tools/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    searched_directories:
-      - "/home/lucas/esp/esp-idf/components/espcoredump/xtensa-esp32-elf-gcc"
-      - "/home/lucas/esp/esp-idf/components/partition_table/xtensa-esp32-elf-gcc"
-      - "/home/lucas/esp/esp-idf/components/app_update/xtensa-esp32-elf-gcc"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-gcc"
-    found: "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc"
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
-      - "CMakeLists.txt:8 (project)"
-    mode: "file"
-    variable: "src_in"
-    description: "Path to a file."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "CMakeCCompilerId.c.in"
-    candidate_directories:
-      - "/usr/share/cmake/Modules/"
-      - "/home/lucas/esp/esp-idf/tools/cmake/"
-      - "/home/lucas/esp/esp-idf/tools/cmake/third_party/"
-    found: "/usr/share/cmake/Modules/CMakeCCompilerId.c.in"
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
+      The host system is: Linux - 5.15.167.4-microsoft-standard-WSL2 - x86_64
   -
     kind: "message-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
       - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
       - "CMakeLists.txt:8 (project)"
     message: |
@@ -376,1069 +31,14 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
       
       The C compiler identification is GNU, found in:
-        /home/lucas/boat-receiver/build/CMakeFiles/4.2.0/CompilerIdC/a.out
+        /home/lucas/Build_Project/boat-receiver/build/CMakeFiles/3.28.3/CompilerIdC/a.out
       
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
-      - "CMakeLists.txt:8 (project)"
-    mode: "program"
-    variable: "CMAKE_AR"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "xtensa-esp32-elf-ar"
-      - "ar"
-    candidate_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/"
-      - "/home/lucas/esp/esp-idf/components/partition_table/"
-      - "/home/lucas/esp/esp-idf/components/app_update/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/"
-      - "/home/lucas/esp/esp-idf/tools/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    found: "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-ar"
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
-      - "CMakeLists.txt:8 (project)"
-    mode: "program"
-    variable: "CMAKE_RANLIB"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "xtensa-esp32-elf-ranlib"
-      - "ranlib"
-    candidate_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/"
-      - "/home/lucas/esp/esp-idf/components/partition_table/"
-      - "/home/lucas/esp/esp-idf/components/app_update/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/"
-      - "/home/lucas/esp/esp-idf/tools/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    found: "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-ranlib"
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
-      - "CMakeLists.txt:8 (project)"
-    mode: "program"
-    variable: "CMAKE_STRIP"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "xtensa-esp32-elf-strip"
-      - "strip"
-    candidate_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/"
-      - "/home/lucas/esp/esp-idf/components/partition_table/"
-      - "/home/lucas/esp/esp-idf/components/app_update/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/"
-      - "/home/lucas/esp/esp-idf/tools/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    found: "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-strip"
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
-      - "CMakeLists.txt:8 (project)"
-    mode: "program"
-    variable: "CMAKE_LINKER"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "xtensa-esp32-elf-ld"
-      - "ld"
-    candidate_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/"
-      - "/home/lucas/esp/esp-idf/components/partition_table/"
-      - "/home/lucas/esp/esp-idf/components/app_update/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/"
-      - "/home/lucas/esp/esp-idf/tools/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    found: "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-ld"
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
-      - "CMakeLists.txt:8 (project)"
-    mode: "program"
-    variable: "CMAKE_NM"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "xtensa-esp32-elf-nm"
-      - "nm"
-    candidate_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/"
-      - "/home/lucas/esp/esp-idf/components/partition_table/"
-      - "/home/lucas/esp/esp-idf/components/app_update/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/"
-      - "/home/lucas/esp/esp-idf/tools/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    found: "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-nm"
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
-      - "CMakeLists.txt:8 (project)"
-    mode: "program"
-    variable: "CMAKE_OBJDUMP"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "xtensa-esp32-elf-objdump"
-      - "objdump"
-    candidate_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/"
-      - "/home/lucas/esp/esp-idf/components/partition_table/"
-      - "/home/lucas/esp/esp-idf/components/app_update/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/"
-      - "/home/lucas/esp/esp-idf/tools/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    found: "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-objdump"
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
-      - "CMakeLists.txt:8 (project)"
-    mode: "program"
-    variable: "CMAKE_OBJCOPY"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "xtensa-esp32-elf-objcopy"
-      - "objcopy"
-    candidate_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/"
-      - "/home/lucas/esp/esp-idf/components/partition_table/"
-      - "/home/lucas/esp/esp-idf/components/app_update/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/"
-      - "/home/lucas/esp/esp-idf/tools/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    found: "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-objcopy"
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
-      - "CMakeLists.txt:8 (project)"
-    mode: "program"
-    variable: "CMAKE_READELF"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "xtensa-esp32-elf-readelf"
-      - "readelf"
-    candidate_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/"
-      - "/home/lucas/esp/esp-idf/components/partition_table/"
-      - "/home/lucas/esp/esp-idf/components/app_update/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/"
-      - "/home/lucas/esp/esp-idf/tools/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    found: "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-readelf"
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
-      - "CMakeLists.txt:8 (project)"
-    mode: "program"
-    variable: "CMAKE_DLLTOOL"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "xtensa-esp32-elf-dlltool"
-      - "dlltool"
-    candidate_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/"
-      - "/home/lucas/esp/esp-idf/components/partition_table/"
-      - "/home/lucas/esp/esp-idf/components/app_update/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/"
-      - "/home/lucas/esp/esp-idf/tools/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    searched_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-dlltool"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/xtensa-esp32-elf-dlltool"
-      - "/home/lucas/esp/esp-idf/components/partition_table/xtensa-esp32-elf-dlltool"
-      - "/home/lucas/esp/esp-idf/components/app_update/xtensa-esp32-elf-dlltool"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-dlltool"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/xtensa-esp32-elf-dlltool"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-dlltool"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/xtensa-esp32-elf-dlltool"
-      - "/home/lucas/esp/esp-idf/tools/xtensa-esp32-elf-dlltool"
-      - "/usr/local/sbin/xtensa-esp32-elf-dlltool"
-      - "/usr/local/bin/xtensa-esp32-elf-dlltool"
-      - "/usr/bin/xtensa-esp32-elf-dlltool"
-      - "/var/lib/flatpak/exports/bin/xtensa-esp32-elf-dlltool"
-      - "/usr/lib/jvm/default/bin/xtensa-esp32-elf-dlltool"
-      - "/usr/bin/site_perl/xtensa-esp32-elf-dlltool"
-      - "/usr/bin/vendor_perl/xtensa-esp32-elf-dlltool"
-      - "/usr/bin/core_perl/xtensa-esp32-elf-dlltool"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/dlltool"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/dlltool"
-      - "/home/lucas/esp/esp-idf/components/partition_table/dlltool"
-      - "/home/lucas/esp/esp-idf/components/app_update/dlltool"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/dlltool"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/dlltool"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/dlltool"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/dlltool"
-      - "/home/lucas/esp/esp-idf/tools/dlltool"
-      - "/usr/local/sbin/dlltool"
-      - "/usr/local/bin/dlltool"
-      - "/usr/bin/dlltool"
-      - "/var/lib/flatpak/exports/bin/dlltool"
-      - "/usr/lib/jvm/default/bin/dlltool"
-      - "/usr/bin/site_perl/dlltool"
-      - "/usr/bin/vendor_perl/dlltool"
-      - "/usr/bin/core_perl/dlltool"
-    found: false
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
-      - "CMakeLists.txt:8 (project)"
-    mode: "program"
-    variable: "CMAKE_ADDR2LINE"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "xtensa-esp32-elf-addr2line"
-      - "addr2line"
-    candidate_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/"
-      - "/home/lucas/esp/esp-idf/components/partition_table/"
-      - "/home/lucas/esp/esp-idf/components/app_update/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/"
-      - "/home/lucas/esp/esp-idf/tools/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    found: "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-addr2line"
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
-      - "CMakeLists.txt:8 (project)"
-    mode: "program"
-    variable: "CMAKE_TAPI"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "xtensa-esp32-elf-tapi"
-      - "tapi"
-    candidate_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/"
-      - "/home/lucas/esp/esp-idf/components/partition_table/"
-      - "/home/lucas/esp/esp-idf/components/app_update/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/"
-      - "/home/lucas/esp/esp-idf/tools/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    searched_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-tapi"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/xtensa-esp32-elf-tapi"
-      - "/home/lucas/esp/esp-idf/components/partition_table/xtensa-esp32-elf-tapi"
-      - "/home/lucas/esp/esp-idf/components/app_update/xtensa-esp32-elf-tapi"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-tapi"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/xtensa-esp32-elf-tapi"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-tapi"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/xtensa-esp32-elf-tapi"
-      - "/home/lucas/esp/esp-idf/tools/xtensa-esp32-elf-tapi"
-      - "/usr/local/sbin/xtensa-esp32-elf-tapi"
-      - "/usr/local/bin/xtensa-esp32-elf-tapi"
-      - "/usr/bin/xtensa-esp32-elf-tapi"
-      - "/var/lib/flatpak/exports/bin/xtensa-esp32-elf-tapi"
-      - "/usr/lib/jvm/default/bin/xtensa-esp32-elf-tapi"
-      - "/usr/bin/site_perl/xtensa-esp32-elf-tapi"
-      - "/usr/bin/vendor_perl/xtensa-esp32-elf-tapi"
-      - "/usr/bin/core_perl/xtensa-esp32-elf-tapi"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/tapi"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/tapi"
-      - "/home/lucas/esp/esp-idf/components/partition_table/tapi"
-      - "/home/lucas/esp/esp-idf/components/app_update/tapi"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/tapi"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/tapi"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/tapi"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/tapi"
-      - "/home/lucas/esp/esp-idf/tools/tapi"
-      - "/usr/local/sbin/tapi"
-      - "/usr/local/bin/tapi"
-      - "/usr/bin/tapi"
-      - "/var/lib/flatpak/exports/bin/tapi"
-      - "/usr/lib/jvm/default/bin/tapi"
-      - "/usr/bin/site_perl/tapi"
-      - "/usr/bin/vendor_perl/tapi"
-      - "/usr/bin/core_perl/tapi"
-    found: false
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
-      - "CMakeLists.txt:8 (project)"
-    mode: "program"
-    variable: "CMAKE_C_COMPILER_AR"
-    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "xtensa-esp32-elf-gcc-ar-14.2"
-      - "xtensa-esp32-elf-gcc-ar-14"
-      - "xtensa-esp32-elf-gcc-ar14"
-      - "xtensa-esp32-elf-gcc-ar"
-    candidate_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/"
-      - "/home/lucas/esp/esp-idf/components/partition_table/"
-      - "/home/lucas/esp/esp-idf/components/app_update/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/"
-      - "/home/lucas/esp/esp-idf/tools/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    searched_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/home/lucas/esp/esp-idf/components/partition_table/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/home/lucas/esp/esp-idf/components/app_update/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/home/lucas/esp/esp-idf/tools/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/usr/local/sbin/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/usr/local/bin/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/usr/bin/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/var/lib/flatpak/exports/bin/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/usr/lib/jvm/default/bin/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/usr/bin/site_perl/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/usr/bin/vendor_perl/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/usr/bin/core_perl/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ar-14"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/xtensa-esp32-elf-gcc-ar-14"
-      - "/home/lucas/esp/esp-idf/components/partition_table/xtensa-esp32-elf-gcc-ar-14"
-      - "/home/lucas/esp/esp-idf/components/app_update/xtensa-esp32-elf-gcc-ar-14"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-gcc-ar-14"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/xtensa-esp32-elf-gcc-ar-14"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ar-14"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/xtensa-esp32-elf-gcc-ar-14"
-      - "/home/lucas/esp/esp-idf/tools/xtensa-esp32-elf-gcc-ar-14"
-      - "/usr/local/sbin/xtensa-esp32-elf-gcc-ar-14"
-      - "/usr/local/bin/xtensa-esp32-elf-gcc-ar-14"
-      - "/usr/bin/xtensa-esp32-elf-gcc-ar-14"
-      - "/var/lib/flatpak/exports/bin/xtensa-esp32-elf-gcc-ar-14"
-      - "/usr/lib/jvm/default/bin/xtensa-esp32-elf-gcc-ar-14"
-      - "/usr/bin/site_perl/xtensa-esp32-elf-gcc-ar-14"
-      - "/usr/bin/vendor_perl/xtensa-esp32-elf-gcc-ar-14"
-      - "/usr/bin/core_perl/xtensa-esp32-elf-gcc-ar-14"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ar14"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/xtensa-esp32-elf-gcc-ar14"
-      - "/home/lucas/esp/esp-idf/components/partition_table/xtensa-esp32-elf-gcc-ar14"
-      - "/home/lucas/esp/esp-idf/components/app_update/xtensa-esp32-elf-gcc-ar14"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-gcc-ar14"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/xtensa-esp32-elf-gcc-ar14"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ar14"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/xtensa-esp32-elf-gcc-ar14"
-      - "/home/lucas/esp/esp-idf/tools/xtensa-esp32-elf-gcc-ar14"
-      - "/usr/local/sbin/xtensa-esp32-elf-gcc-ar14"
-      - "/usr/local/bin/xtensa-esp32-elf-gcc-ar14"
-      - "/usr/bin/xtensa-esp32-elf-gcc-ar14"
-      - "/var/lib/flatpak/exports/bin/xtensa-esp32-elf-gcc-ar14"
-      - "/usr/lib/jvm/default/bin/xtensa-esp32-elf-gcc-ar14"
-      - "/usr/bin/site_perl/xtensa-esp32-elf-gcc-ar14"
-      - "/usr/bin/vendor_perl/xtensa-esp32-elf-gcc-ar14"
-      - "/usr/bin/core_perl/xtensa-esp32-elf-gcc-ar14"
-    found: "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ar"
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
-      - "CMakeLists.txt:8 (project)"
-    mode: "program"
-    variable: "CMAKE_C_COMPILER_RANLIB"
-    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "xtensa-esp32-elf-gcc-ranlib-14"
-      - "xtensa-esp32-elf-gcc-ranlib14"
-      - "xtensa-esp32-elf-gcc-ranlib"
-    candidate_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/"
-      - "/home/lucas/esp/esp-idf/components/partition_table/"
-      - "/home/lucas/esp/esp-idf/components/app_update/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/"
-      - "/home/lucas/esp/esp-idf/tools/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    searched_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/home/lucas/esp/esp-idf/components/partition_table/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/home/lucas/esp/esp-idf/components/app_update/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/home/lucas/esp/esp-idf/tools/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/usr/local/sbin/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/usr/local/bin/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/usr/bin/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/var/lib/flatpak/exports/bin/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/usr/lib/jvm/default/bin/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/usr/bin/site_perl/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/usr/bin/vendor_perl/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/usr/bin/core_perl/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/home/lucas/esp/esp-idf/components/partition_table/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/home/lucas/esp/esp-idf/components/app_update/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/home/lucas/esp/esp-idf/tools/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/usr/local/sbin/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/usr/local/bin/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/usr/bin/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/var/lib/flatpak/exports/bin/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/usr/lib/jvm/default/bin/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/usr/bin/site_perl/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/usr/bin/vendor_perl/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/usr/bin/core_perl/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ranlib14"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/xtensa-esp32-elf-gcc-ranlib14"
-      - "/home/lucas/esp/esp-idf/components/partition_table/xtensa-esp32-elf-gcc-ranlib14"
-      - "/home/lucas/esp/esp-idf/components/app_update/xtensa-esp32-elf-gcc-ranlib14"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-gcc-ranlib14"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/xtensa-esp32-elf-gcc-ranlib14"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ranlib14"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/xtensa-esp32-elf-gcc-ranlib14"
-      - "/home/lucas/esp/esp-idf/tools/xtensa-esp32-elf-gcc-ranlib14"
-      - "/usr/local/sbin/xtensa-esp32-elf-gcc-ranlib14"
-      - "/usr/local/bin/xtensa-esp32-elf-gcc-ranlib14"
-      - "/usr/bin/xtensa-esp32-elf-gcc-ranlib14"
-      - "/var/lib/flatpak/exports/bin/xtensa-esp32-elf-gcc-ranlib14"
-      - "/usr/lib/jvm/default/bin/xtensa-esp32-elf-gcc-ranlib14"
-      - "/usr/bin/site_perl/xtensa-esp32-elf-gcc-ranlib14"
-      - "/usr/bin/vendor_perl/xtensa-esp32-elf-gcc-ranlib14"
-      - "/usr/bin/core_perl/xtensa-esp32-elf-gcc-ranlib14"
-    found: "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ranlib"
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompiler.cmake:115 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:71 (_cmake_find_compiler_path)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
-      - "CMakeLists.txt:8 (project)"
-    mode: "program"
-    variable: "CMAKE_CXX_COMPILER_WITH_PATH"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "xtensa-esp32-elf-g++"
-    candidate_directories:
-      - "/home/lucas/esp/esp-idf/components/espcoredump/"
-      - "/home/lucas/esp/esp-idf/components/partition_table/"
-      - "/home/lucas/esp/esp-idf/components/app_update/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/"
-      - "/home/lucas/esp/esp-idf/tools/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    searched_directories:
-      - "/home/lucas/esp/esp-idf/components/espcoredump/xtensa-esp32-elf-g++"
-      - "/home/lucas/esp/esp-idf/components/partition_table/xtensa-esp32-elf-g++"
-      - "/home/lucas/esp/esp-idf/components/app_update/xtensa-esp32-elf-g++"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-g++"
-    found: "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-g++"
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
-      - "CMakeLists.txt:8 (project)"
-    mode: "file"
-    variable: "src_in"
-    description: "Path to a file."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "CMakeCXXCompilerId.cpp.in"
-    candidate_directories:
-      - "/usr/share/cmake/Modules/"
-      - "/home/lucas/esp/esp-idf/tools/cmake/"
-      - "/home/lucas/esp/esp-idf/tools/cmake/third_party/"
-    found: "/usr/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
   -
     kind: "message-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
       - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
       - "CMakeLists.txt:8 (project)"
     message: |
@@ -1454,302 +54,13 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
       
       The CXX compiler identification is GNU, found in:
-        /home/lucas/boat-receiver/build/CMakeFiles/4.2.0/CompilerIdCXX/a.out
+        /home/lucas/Build_Project/boat-receiver/build/CMakeFiles/3.28.3/CompilerIdCXX/a.out
       
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
-      - "CMakeLists.txt:8 (project)"
-    mode: "program"
-    variable: "CMAKE_CXX_COMPILER_AR"
-    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "xtensa-esp32-elf-gcc-ar-14.2"
-      - "xtensa-esp32-elf-gcc-ar-14"
-      - "xtensa-esp32-elf-gcc-ar14"
-      - "xtensa-esp32-elf-gcc-ar"
-    candidate_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/"
-      - "/home/lucas/esp/esp-idf/components/partition_table/"
-      - "/home/lucas/esp/esp-idf/components/app_update/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/"
-      - "/home/lucas/esp/esp-idf/tools/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    searched_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/home/lucas/esp/esp-idf/components/partition_table/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/home/lucas/esp/esp-idf/components/app_update/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/home/lucas/esp/esp-idf/tools/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/usr/local/sbin/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/usr/local/bin/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/usr/bin/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/var/lib/flatpak/exports/bin/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/usr/lib/jvm/default/bin/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/usr/bin/site_perl/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/usr/bin/vendor_perl/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/usr/bin/core_perl/xtensa-esp32-elf-gcc-ar-14.2"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ar-14"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/xtensa-esp32-elf-gcc-ar-14"
-      - "/home/lucas/esp/esp-idf/components/partition_table/xtensa-esp32-elf-gcc-ar-14"
-      - "/home/lucas/esp/esp-idf/components/app_update/xtensa-esp32-elf-gcc-ar-14"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-gcc-ar-14"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/xtensa-esp32-elf-gcc-ar-14"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ar-14"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/xtensa-esp32-elf-gcc-ar-14"
-      - "/home/lucas/esp/esp-idf/tools/xtensa-esp32-elf-gcc-ar-14"
-      - "/usr/local/sbin/xtensa-esp32-elf-gcc-ar-14"
-      - "/usr/local/bin/xtensa-esp32-elf-gcc-ar-14"
-      - "/usr/bin/xtensa-esp32-elf-gcc-ar-14"
-      - "/var/lib/flatpak/exports/bin/xtensa-esp32-elf-gcc-ar-14"
-      - "/usr/lib/jvm/default/bin/xtensa-esp32-elf-gcc-ar-14"
-      - "/usr/bin/site_perl/xtensa-esp32-elf-gcc-ar-14"
-      - "/usr/bin/vendor_perl/xtensa-esp32-elf-gcc-ar-14"
-      - "/usr/bin/core_perl/xtensa-esp32-elf-gcc-ar-14"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ar14"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/xtensa-esp32-elf-gcc-ar14"
-      - "/home/lucas/esp/esp-idf/components/partition_table/xtensa-esp32-elf-gcc-ar14"
-      - "/home/lucas/esp/esp-idf/components/app_update/xtensa-esp32-elf-gcc-ar14"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-gcc-ar14"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/xtensa-esp32-elf-gcc-ar14"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ar14"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/xtensa-esp32-elf-gcc-ar14"
-      - "/home/lucas/esp/esp-idf/tools/xtensa-esp32-elf-gcc-ar14"
-      - "/usr/local/sbin/xtensa-esp32-elf-gcc-ar14"
-      - "/usr/local/bin/xtensa-esp32-elf-gcc-ar14"
-      - "/usr/bin/xtensa-esp32-elf-gcc-ar14"
-      - "/var/lib/flatpak/exports/bin/xtensa-esp32-elf-gcc-ar14"
-      - "/usr/lib/jvm/default/bin/xtensa-esp32-elf-gcc-ar14"
-      - "/usr/bin/site_perl/xtensa-esp32-elf-gcc-ar14"
-      - "/usr/bin/vendor_perl/xtensa-esp32-elf-gcc-ar14"
-      - "/usr/bin/core_perl/xtensa-esp32-elf-gcc-ar14"
-    found: "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ar"
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
-      - "CMakeLists.txt:8 (project)"
-    mode: "program"
-    variable: "CMAKE_CXX_COMPILER_RANLIB"
-    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "xtensa-esp32-elf-gcc-ranlib-14"
-      - "xtensa-esp32-elf-gcc-ranlib14"
-      - "xtensa-esp32-elf-gcc-ranlib"
-    candidate_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/"
-      - "/home/lucas/esp/esp-idf/components/partition_table/"
-      - "/home/lucas/esp/esp-idf/components/app_update/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/"
-      - "/home/lucas/esp/esp-idf/tools/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    searched_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/home/lucas/esp/esp-idf/components/partition_table/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/home/lucas/esp/esp-idf/components/app_update/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/home/lucas/esp/esp-idf/tools/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/usr/local/sbin/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/usr/local/bin/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/usr/bin/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/var/lib/flatpak/exports/bin/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/usr/lib/jvm/default/bin/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/usr/bin/site_perl/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/usr/bin/vendor_perl/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/usr/bin/core_perl/xtensa-esp32-elf-gcc-ranlib-14.2"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/home/lucas/esp/esp-idf/components/partition_table/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/home/lucas/esp/esp-idf/components/app_update/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/home/lucas/esp/esp-idf/tools/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/usr/local/sbin/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/usr/local/bin/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/usr/bin/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/var/lib/flatpak/exports/bin/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/usr/lib/jvm/default/bin/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/usr/bin/site_perl/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/usr/bin/vendor_perl/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/usr/bin/core_perl/xtensa-esp32-elf-gcc-ranlib-14"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ranlib14"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/xtensa-esp32-elf-gcc-ranlib14"
-      - "/home/lucas/esp/esp-idf/components/partition_table/xtensa-esp32-elf-gcc-ranlib14"
-      - "/home/lucas/esp/esp-idf/components/app_update/xtensa-esp32-elf-gcc-ranlib14"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-gcc-ranlib14"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/xtensa-esp32-elf-gcc-ranlib14"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ranlib14"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/xtensa-esp32-elf-gcc-ranlib14"
-      - "/home/lucas/esp/esp-idf/tools/xtensa-esp32-elf-gcc-ranlib14"
-      - "/usr/local/sbin/xtensa-esp32-elf-gcc-ranlib14"
-      - "/usr/local/bin/xtensa-esp32-elf-gcc-ranlib14"
-      - "/usr/bin/xtensa-esp32-elf-gcc-ranlib14"
-      - "/var/lib/flatpak/exports/bin/xtensa-esp32-elf-gcc-ranlib14"
-      - "/usr/lib/jvm/default/bin/xtensa-esp32-elf-gcc-ranlib14"
-      - "/usr/bin/site_perl/xtensa-esp32-elf-gcc-ranlib14"
-      - "/usr/bin/vendor_perl/xtensa-esp32-elf-gcc-ranlib14"
-      - "/usr/bin/core_perl/xtensa-esp32-elf-gcc-ranlib14"
-    found: "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ranlib"
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompiler.cmake:115 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineASMCompiler.cmake:64 (_cmake_find_compiler_path)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
-      - "CMakeLists.txt:8 (project)"
-    mode: "program"
-    variable: "CMAKE_ASM_COMPILER_WITH_PATH"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "xtensa-esp32-elf-gcc"
-    candidate_directories:
-      - "/home/lucas/esp/esp-idf/components/espcoredump/"
-      - "/home/lucas/esp/esp-idf/components/partition_table/"
-      - "/home/lucas/esp/esp-idf/components/app_update/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/"
-      - "/home/lucas/esp/esp-idf/tools/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    searched_directories:
-      - "/home/lucas/esp/esp-idf/components/espcoredump/xtensa-esp32-elf-gcc"
-      - "/home/lucas/esp/esp-idf/components/partition_table/xtensa-esp32-elf-gcc"
-      - "/home/lucas/esp/esp-idf/components/app_update/xtensa-esp32-elf-gcc"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-gcc"
-    found: "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc"
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
   -
     kind: "message-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:1290 (message)"
-      - "/usr/share/cmake/Modules/CMakeDetermineASMCompiler.cmake:170 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1131 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
       - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
       - "CMakeLists.txt:8 (project)"
     message: |
@@ -1760,209 +71,17 @@ events:
       warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
       
   -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineASMCompiler.cmake:268 (include)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
-      - "CMakeLists.txt:8 (project)"
-    mode: "program"
-    variable: "CMAKE_ASM_COMPILER_AR"
-    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "xtensa-esp32-elf-gcc-ar-"
-      - "xtensa-esp32-elf-gcc-ar-"
-      - "xtensa-esp32-elf-gcc-ar"
-      - "xtensa-esp32-elf-gcc-ar"
-    candidate_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/"
-      - "/home/lucas/esp/esp-idf/components/partition_table/"
-      - "/home/lucas/esp/esp-idf/components/app_update/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/"
-      - "/home/lucas/esp/esp-idf/tools/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    searched_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ar-"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/xtensa-esp32-elf-gcc-ar-"
-      - "/home/lucas/esp/esp-idf/components/partition_table/xtensa-esp32-elf-gcc-ar-"
-      - "/home/lucas/esp/esp-idf/components/app_update/xtensa-esp32-elf-gcc-ar-"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-gcc-ar-"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/xtensa-esp32-elf-gcc-ar-"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ar-"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/xtensa-esp32-elf-gcc-ar-"
-      - "/home/lucas/esp/esp-idf/tools/xtensa-esp32-elf-gcc-ar-"
-      - "/usr/local/sbin/xtensa-esp32-elf-gcc-ar-"
-      - "/usr/local/bin/xtensa-esp32-elf-gcc-ar-"
-      - "/usr/bin/xtensa-esp32-elf-gcc-ar-"
-      - "/var/lib/flatpak/exports/bin/xtensa-esp32-elf-gcc-ar-"
-      - "/usr/lib/jvm/default/bin/xtensa-esp32-elf-gcc-ar-"
-      - "/usr/bin/site_perl/xtensa-esp32-elf-gcc-ar-"
-      - "/usr/bin/vendor_perl/xtensa-esp32-elf-gcc-ar-"
-      - "/usr/bin/core_perl/xtensa-esp32-elf-gcc-ar-"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ar-"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/xtensa-esp32-elf-gcc-ar-"
-      - "/home/lucas/esp/esp-idf/components/partition_table/xtensa-esp32-elf-gcc-ar-"
-      - "/home/lucas/esp/esp-idf/components/app_update/xtensa-esp32-elf-gcc-ar-"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-gcc-ar-"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/xtensa-esp32-elf-gcc-ar-"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ar-"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/xtensa-esp32-elf-gcc-ar-"
-      - "/home/lucas/esp/esp-idf/tools/xtensa-esp32-elf-gcc-ar-"
-      - "/usr/local/sbin/xtensa-esp32-elf-gcc-ar-"
-      - "/usr/local/bin/xtensa-esp32-elf-gcc-ar-"
-      - "/usr/bin/xtensa-esp32-elf-gcc-ar-"
-      - "/var/lib/flatpak/exports/bin/xtensa-esp32-elf-gcc-ar-"
-      - "/usr/lib/jvm/default/bin/xtensa-esp32-elf-gcc-ar-"
-      - "/usr/bin/site_perl/xtensa-esp32-elf-gcc-ar-"
-      - "/usr/bin/vendor_perl/xtensa-esp32-elf-gcc-ar-"
-      - "/usr/bin/core_perl/xtensa-esp32-elf-gcc-ar-"
-    found: "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ar"
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineASMCompiler.cmake:268 (include)"
-      - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
-      - "CMakeLists.txt:8 (project)"
-    mode: "program"
-    variable: "CMAKE_ASM_COMPILER_RANLIB"
-    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "xtensa-esp32-elf-gcc-ranlib-"
-      - "xtensa-esp32-elf-gcc-ranlib-"
-      - "xtensa-esp32-elf-gcc-ranlib"
-      - "xtensa-esp32-elf-gcc-ranlib"
-    candidate_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/"
-      - "/home/lucas/esp/esp-idf/components/partition_table/"
-      - "/home/lucas/esp/esp-idf/components/app_update/"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/"
-      - "/home/lucas/esp/esp-idf/tools/"
-      - "/usr/local/sbin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/lib/jvm/default/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-    searched_directories:
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ranlib-"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/xtensa-esp32-elf-gcc-ranlib-"
-      - "/home/lucas/esp/esp-idf/components/partition_table/xtensa-esp32-elf-gcc-ranlib-"
-      - "/home/lucas/esp/esp-idf/components/app_update/xtensa-esp32-elf-gcc-ranlib-"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-gcc-ranlib-"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/xtensa-esp32-elf-gcc-ranlib-"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ranlib-"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/xtensa-esp32-elf-gcc-ranlib-"
-      - "/home/lucas/esp/esp-idf/tools/xtensa-esp32-elf-gcc-ranlib-"
-      - "/usr/local/sbin/xtensa-esp32-elf-gcc-ranlib-"
-      - "/usr/local/bin/xtensa-esp32-elf-gcc-ranlib-"
-      - "/usr/bin/xtensa-esp32-elf-gcc-ranlib-"
-      - "/var/lib/flatpak/exports/bin/xtensa-esp32-elf-gcc-ranlib-"
-      - "/usr/lib/jvm/default/bin/xtensa-esp32-elf-gcc-ranlib-"
-      - "/usr/bin/site_perl/xtensa-esp32-elf-gcc-ranlib-"
-      - "/usr/bin/vendor_perl/xtensa-esp32-elf-gcc-ranlib-"
-      - "/usr/bin/core_perl/xtensa-esp32-elf-gcc-ranlib-"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ranlib-"
-      - "/home/lucas/esp/esp-idf/components/espcoredump/xtensa-esp32-elf-gcc-ranlib-"
-      - "/home/lucas/esp/esp-idf/components/partition_table/xtensa-esp32-elf-gcc-ranlib-"
-      - "/home/lucas/esp/esp-idf/components/app_update/xtensa-esp32-elf-gcc-ranlib-"
-      - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-gcc-ranlib-"
-      - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin/xtensa-esp32-elf-gcc-ranlib-"
-      - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin/xtensa-esp32-elf-gcc-ranlib-"
-      - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin/xtensa-esp32-elf-gcc-ranlib-"
-      - "/home/lucas/esp/esp-idf/tools/xtensa-esp32-elf-gcc-ranlib-"
-      - "/usr/local/sbin/xtensa-esp32-elf-gcc-ranlib-"
-      - "/usr/local/bin/xtensa-esp32-elf-gcc-ranlib-"
-      - "/usr/bin/xtensa-esp32-elf-gcc-ranlib-"
-      - "/var/lib/flatpak/exports/bin/xtensa-esp32-elf-gcc-ranlib-"
-      - "/usr/lib/jvm/default/bin/xtensa-esp32-elf-gcc-ranlib-"
-      - "/usr/bin/site_perl/xtensa-esp32-elf-gcc-ranlib-"
-      - "/usr/bin/vendor_perl/xtensa-esp32-elf-gcc-ranlib-"
-      - "/usr/bin/core_perl/xtensa-esp32-elf-gcc-ranlib-"
-    found: "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ranlib"
-    search_context:
-      ENV{PATH}:
-        - "/home/lucas/esp/esp-idf/components/espcoredump"
-        - "/home/lucas/esp/esp-idf/components/partition_table"
-        - "/home/lucas/esp/esp-idf/components/app_update"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf-gdb/16.2_20250324/xtensa-esp-elf-gdb/bin"
-        - "/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin"
-        - "/home/lucas/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin"
-        - "/home/lucas/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/bin"
-        - "/home/lucas/.espressif/python_env/idf5.5_py3.13_env/bin"
-        - "/home/lucas/esp/esp-idf/tools"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/lib/jvm/default/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-  -
     kind: "try_compile-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
-      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
       - "CMakeLists.txt:8 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/lucas/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-XSHXRR"
-      binary: "/home/lucas/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-XSHXRR"
+      source: "/home/lucas/Build_Project/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-IGEG3D"
+      binary: "/home/lucas/Build_Project/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-IGEG3D"
     cmakeVariables:
       CMAKE_C_FLAGS: "-mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -1972,10 +91,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/lucas/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-XSHXRR'
+        Change Dir: '/home/lucas/Build_Project/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-IGEG3D'
         
-        Run Build Command(s): /usr/bin/ninja -v cmTC_d04b7
-        [1/2] /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc   -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_d04b7.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /usr/bin/ninja -v cmTC_014fc
+        [1/2] /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc   -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_014fc.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp-elf-gcc
         Target: xtensa-esp-elf
@@ -1983,8 +102,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 14.2.0 (crosstool-NG esp-14.2.0_20241119) 
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_d04b7.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_d04b7.dir/'
-         /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/cc1 -quiet -v -imultilib esp32 -iprefix /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/ -isysroot /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d04b7.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mdynconfig=xtensa_esp32.so -mlongcalls -Wno-frame-address -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o /tmp/ccGpx2He.s
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_014fc.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_014fc.dir/'
+         /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/cc1 -quiet -v -imultilib esp32 -iprefix /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/ -isysroot /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_014fc.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mdynconfig=xtensa_esp32.so -mlongcalls -Wno-frame-address -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o /tmp/ccd3CmZz.s
         GNU C17 (crosstool-NG esp-14.2.0_20241119) version 14.2.0 (xtensa-esp-elf)
         	compiled by GNU C version 4.9.2, GMP version 6.2.1, MPFR version 4.2.1, MPC version 1.2.1, isl version isl-0.26-GMP
         
@@ -2001,12 +120,12 @@ events:
          /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/include
         End of search list.
         Compiler executable checksum: 81174f71db4416537376b4420f5c69fd
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_d04b7.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_d04b7.dir/'
-         /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32.so -o CMakeFiles/cmTC_d04b7.dir/CMakeCCompilerABI.c.obj /tmp/ccGpx2He.s
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_014fc.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_014fc.dir/'
+         /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32.so -o CMakeFiles/cmTC_014fc.dir/CMakeCCompilerABI.c.obj /tmp/ccd3CmZz.s
         COMPILER_PATH=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/
         LIBRARY_PATH=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_d04b7.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_d04b7.dir/CMakeCCompilerABI.c.'
-        [2/2] : && /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -nostartfiles  -v CMakeFiles/cmTC_d04b7.dir/CMakeCCompilerABI.c.obj -o cmTC_d04b7   && :
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_014fc.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_014fc.dir/CMakeCCompilerABI.c.'
+        [2/2] : && /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -nostartfiles  -v CMakeFiles/cmTC_014fc.dir/CMakeCCompilerABI.c.obj -o cmTC_014fc   && :
         Using built-in specs.
         COLLECT_GCC=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp-elf-gcc
         COLLECT_LTO_WRAPPER=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper
@@ -2017,17 +136,17 @@ events:
         gcc version 14.2.0 (crosstool-NG esp-14.2.0_20241119) 
         COMPILER_PATH=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/
         LIBRARY_PATH=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_d04b7' '-dumpdir' 'cmTC_d04b7.'
-         /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/collect2 -plugin /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/liblto_plugin.so -plugin-opt=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccF9K6X0.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32.so -o cmTC_d04b7 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_d04b7.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc
-        /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 00400074
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_d04b7' '-dumpdir' 'cmTC_d04b7.'
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_014fc' '-dumpdir' 'cmTC_014fc.'
+         /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/collect2 -plugin /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/liblto_plugin.so -plugin-opt=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccTXjvGJ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32.so -o cmTC_014fc -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_014fc.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc
+        /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 00400054
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_014fc' '-dumpdir' 'cmTC_014fc.'
         
       exitCode: 0
   -
     kind: "message-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
-      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
       - "CMakeLists.txt:8 (project)"
     message: |
@@ -2047,18 +166,17 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
-      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
       - "CMakeLists.txt:8 (project)"
     message: |
       Parsed C implicit link information:
-        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/lucas/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-XSHXRR']
+        link line regex: [^( *|.*[/\\])(xtensa-esp32-elf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/lucas/Build_Project/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-IGEG3D']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/ninja -v cmTC_d04b7]
-        ignore line: [[1/2] /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc   -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_d04b7.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /usr/bin/ninja -v cmTC_014fc]
+        ignore line: [[1/2] /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc   -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_014fc.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp-elf-gcc]
         ignore line: [Target: xtensa-esp-elf]
@@ -2066,8 +184,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 14.2.0 (crosstool-NG esp-14.2.0_20241119) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_d04b7.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_d04b7.dir/']
-        ignore line: [ /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/cc1 -quiet -v -imultilib esp32 -iprefix /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/ -isysroot /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d04b7.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mdynconfig=xtensa_esp32.so -mlongcalls -Wno-frame-address -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o /tmp/ccGpx2He.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_014fc.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_014fc.dir/']
+        ignore line: [ /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/cc1 -quiet -v -imultilib esp32 -iprefix /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/ -isysroot /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_014fc.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mdynconfig=xtensa_esp32.so -mlongcalls -Wno-frame-address -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o /tmp/ccd3CmZz.s]
         ignore line: [GNU C17 (crosstool-NG esp-14.2.0_20241119) version 14.2.0 (xtensa-esp-elf)]
         ignore line: [	compiled by GNU C version 4.9.2  GMP version 6.2.1  MPFR version 4.2.1  MPC version 1.2.1  isl version isl-0.26-GMP]
         ignore line: []
@@ -2084,12 +202,12 @@ events:
         ignore line: [ /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 81174f71db4416537376b4420f5c69fd]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_d04b7.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_d04b7.dir/']
-        ignore line: [ /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32.so -o CMakeFiles/cmTC_d04b7.dir/CMakeCCompilerABI.c.obj /tmp/ccGpx2He.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_014fc.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_014fc.dir/']
+        ignore line: [ /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32.so -o CMakeFiles/cmTC_014fc.dir/CMakeCCompilerABI.c.obj /tmp/ccd3CmZz.s]
         ignore line: [COMPILER_PATH=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/]
         ignore line: [LIBRARY_PATH=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_d04b7.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_d04b7.dir/CMakeCCompilerABI.c.']
-        ignore line: [[2/2] : && /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -nostartfiles  -v CMakeFiles/cmTC_d04b7.dir/CMakeCCompilerABI.c.obj -o cmTC_d04b7   && :]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_014fc.dir/CMakeCCompilerABI.c.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_014fc.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] : && /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -nostartfiles  -v CMakeFiles/cmTC_014fc.dir/CMakeCCompilerABI.c.obj -o cmTC_014fc   && :]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp-elf-gcc]
         ignore line: [COLLECT_LTO_WRAPPER=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper]
@@ -2100,13 +218,13 @@ events:
         ignore line: [gcc version 14.2.0 (crosstool-NG esp-14.2.0_20241119) ]
         ignore line: [COMPILER_PATH=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/]
         ignore line: [LIBRARY_PATH=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_d04b7' '-dumpdir' 'cmTC_d04b7.']
-        link line: [ /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/collect2 -plugin /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/liblto_plugin.so -plugin-opt=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccF9K6X0.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32.so -o cmTC_d04b7 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_d04b7.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_014fc' '-dumpdir' 'cmTC_014fc.']
+        link line: [ /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/collect2 -plugin /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/liblto_plugin.so -plugin-opt=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccTXjvGJ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32.so -o cmTC_014fc -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_014fc.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc]
           arg [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccF9K6X0.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccTXjvGJ.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
           arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
@@ -2115,7 +233,7 @@ events:
           arg [--sysroot=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf] ==> ignore
           arg [--dynconfig=xtensa_esp32.so] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_d04b7] ==> ignore
+          arg [cmTC_014fc] ==> ignore
           arg [-L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32] ==> dir [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32]
           arg [-L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32] ==> dir [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32]
           arg [-L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32] ==> dir [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32]
@@ -2124,17 +242,12 @@ events:
           arg [-L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib] ==> dir [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib]
           arg [-L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib] ==> dir [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib]
           arg [-L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib] ==> dir [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib]
-          arg [CMakeFiles/cmTC_d04b7.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [CMakeFiles/cmTC_014fc.dir/CMakeCCompilerABI.c.obj] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [-lc] ==> lib [c]
           arg [-lnosys] ==> lib [nosys]
           arg [-lc] ==> lib [c]
           arg [-lgcc] ==> lib [gcc]
-        ignore line: [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: warning: cannot find entry symbol _start]
-        ignore line: [ defaulting to 00400074]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_d04b7' '-dumpdir' 'cmTC_d04b7.']
-        ignore line: []
-        ignore line: []
         collapse library dir [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32] ==> [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/14.2.0/esp32]
         collapse library dir [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32] ==> [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/lib/esp32]
         collapse library dir [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32] ==> [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/lib/esp32]
@@ -2152,29 +265,28 @@ events:
   -
     kind: "try_compile-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
-      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
       - "CMakeLists.txt:8 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/lucas/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-gMsDJG"
-      binary: "/home/lucas/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-gMsDJG"
+      source: "/home/lucas/Build_Project/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-CmHxpR"
+      binary: "/home/lucas/Build_Project/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-CmHxpR"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
       CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
       CMAKE_EXE_LINKER_FLAGS: "-nostartfiles "
       CMAKE_MODULE_PATH: "/home/lucas/esp/esp-idf/tools/cmake;/home/lucas/esp/esp-idf/tools/cmake/third_party"
     buildResult:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/lucas/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-gMsDJG'
+        Change Dir: '/home/lucas/Build_Project/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-CmHxpR'
         
-        Run Build Command(s): /usr/bin/ninja -v cmTC_020a4
-        [1/2] /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-g++   -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_020a4.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/ninja -v cmTC_4c099
+        [1/2] /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-g++   -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_4c099.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp-elf-g++
         Target: xtensa-esp-elf
@@ -2182,8 +294,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 14.2.0 (crosstool-NG esp-14.2.0_20241119) 
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_020a4.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_020a4.dir/'
-         /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/cc1plus -quiet -v -imultilib esp32 -iprefix /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/ -isysroot /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_020a4.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mdynconfig=xtensa_esp32.so -mlongcalls -Wno-frame-address -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o /tmp/ccmszdvn.s
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_4c099.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_4c099.dir/'
+         /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/cc1plus -quiet -v -imultilib esp32 -iprefix /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/ -isysroot /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_4c099.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mdynconfig=xtensa_esp32.so -mlongcalls -Wno-frame-address -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o /tmp/cclztiQ7.s
         GNU C++17 (crosstool-NG esp-14.2.0_20241119) version 14.2.0 (xtensa-esp-elf)
         	compiled by GNU C version 4.9.2, GMP version 6.2.1, MPFR version 4.2.1, MPC version 1.2.1, isl version isl-0.26-GMP
         
@@ -2206,12 +318,12 @@ events:
          /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/include
         End of search list.
         Compiler executable checksum: 00a0abec3a35f1fd29e56d9fb54b091a
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_020a4.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_020a4.dir/'
-         /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32.so -o CMakeFiles/cmTC_020a4.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccmszdvn.s
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_4c099.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_4c099.dir/'
+         /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32.so -o CMakeFiles/cmTC_4c099.dir/CMakeCXXCompilerABI.cpp.obj /tmp/cclztiQ7.s
         COMPILER_PATH=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/
         LIBRARY_PATH=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_020a4.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_020a4.dir/CMakeCXXCompilerABI.cpp.'
-        [2/2] : && /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-g++ -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -nostartfiles  -v CMakeFiles/cmTC_020a4.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_020a4   && :
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_4c099.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_4c099.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] : && /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-g++ -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -nostartfiles  -v CMakeFiles/cmTC_4c099.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_4c099   && :
         Using built-in specs.
         COLLECT_GCC=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp-elf-g++
         COLLECT_LTO_WRAPPER=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper
@@ -2222,17 +334,17 @@ events:
         gcc version 14.2.0 (crosstool-NG esp-14.2.0_20241119) 
         COMPILER_PATH=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/
         LIBRARY_PATH=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_020a4' '-dumpdir' 'cmTC_020a4.'
-         /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/collect2 -plugin /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/liblto_plugin.so -plugin-opt=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc2LAnKx.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32.so -o cmTC_020a4 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_020a4.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc
-        /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 00400074
-        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_020a4' '-dumpdir' 'cmTC_020a4.'
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_4c099' '-dumpdir' 'cmTC_4c099.'
+         /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/collect2 -plugin /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/liblto_plugin.so -plugin-opt=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpX3F31.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32.so -o cmTC_4c099 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_4c099.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc
+        /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 00400054
+        COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_4c099' '-dumpdir' 'cmTC_4c099.'
         
       exitCode: 0
   -
     kind: "message-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
-      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
       - "CMakeLists.txt:8 (project)"
     message: |
@@ -2258,18 +370,17 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
-      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "/home/lucas/esp/esp-idf/tools/cmake/project.cmake:589 (__project)"
       - "CMakeLists.txt:8 (project)"
     message: |
       Parsed CXX implicit link information:
-        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/lucas/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-gMsDJG']
+        link line regex: [^( *|.*[/\\])(xtensa-esp32-elf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/lucas/Build_Project/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-CmHxpR']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/ninja -v cmTC_020a4]
-        ignore line: [[1/2] /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-g++   -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_020a4.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/ninja -v cmTC_4c099]
+        ignore line: [[1/2] /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-g++   -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy    -v -o CMakeFiles/cmTC_4c099.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp-elf-g++]
         ignore line: [Target: xtensa-esp-elf]
@@ -2277,8 +388,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 14.2.0 (crosstool-NG esp-14.2.0_20241119) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_020a4.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_020a4.dir/']
-        ignore line: [ /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/cc1plus -quiet -v -imultilib esp32 -iprefix /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/ -isysroot /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_020a4.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mdynconfig=xtensa_esp32.so -mlongcalls -Wno-frame-address -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o /tmp/ccmszdvn.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_4c099.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_4c099.dir/']
+        ignore line: [ /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/cc1plus -quiet -v -imultilib esp32 -iprefix /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/ -isysroot /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_4c099.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mdynconfig=xtensa_esp32.so -mlongcalls -Wno-frame-address -version -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o /tmp/cclztiQ7.s]
         ignore line: [GNU C++17 (crosstool-NG esp-14.2.0_20241119) version 14.2.0 (xtensa-esp-elf)]
         ignore line: [	compiled by GNU C version 4.9.2  GMP version 6.2.1  MPFR version 4.2.1  MPC version 1.2.1  isl version isl-0.26-GMP]
         ignore line: []
@@ -2301,12 +412,12 @@ events:
         ignore line: [ /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 00a0abec3a35f1fd29e56d9fb54b091a]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_020a4.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_020a4.dir/']
-        ignore line: [ /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32.so -o CMakeFiles/cmTC_020a4.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccmszdvn.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_4c099.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_4c099.dir/']
+        ignore line: [ /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/as --traditional-format --longcalls --dynconfig=xtensa_esp32.so -o CMakeFiles/cmTC_4c099.dir/CMakeCXXCompilerABI.cpp.obj /tmp/cclztiQ7.s]
         ignore line: [COMPILER_PATH=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/]
         ignore line: [LIBRARY_PATH=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_020a4.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_020a4.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [[2/2] : && /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-g++ -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -nostartfiles  -v CMakeFiles/cmTC_020a4.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_020a4   && :]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-v' '-o' 'CMakeFiles/cmTC_4c099.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-dumpdir' 'CMakeFiles/cmTC_4c099.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] : && /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-g++ -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -nostartfiles  -v CMakeFiles/cmTC_4c099.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_4c099   && :]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp-elf-g++]
         ignore line: [COLLECT_LTO_WRAPPER=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper]
@@ -2317,13 +428,13 @@ events:
         ignore line: [gcc version 14.2.0 (crosstool-NG esp-14.2.0_20241119) ]
         ignore line: [COMPILER_PATH=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/]
         ignore line: [LIBRARY_PATH=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/:/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_020a4' '-dumpdir' 'cmTC_020a4.']
-        link line: [ /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/collect2 -plugin /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/liblto_plugin.so -plugin-opt=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc2LAnKx.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32.so -o cmTC_020a4 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_020a4.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc]
+        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_4c099' '-dumpdir' 'cmTC_4c099.']
+        link line: [ /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/collect2 -plugin /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/liblto_plugin.so -plugin-opt=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpX3F31.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf --dynconfig=xtensa_esp32.so -o cmTC_4c099 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0 -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib -L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib CMakeFiles/cmTC_4c099.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc]
           arg [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../libexec/gcc/xtensa-esp-elf/14.2.0/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/cc2LAnKx.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccpX3F31.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
           arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
@@ -2332,7 +443,7 @@ events:
           arg [--sysroot=/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf] ==> ignore
           arg [--dynconfig=xtensa_esp32.so] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_020a4] ==> ignore
+          arg [cmTC_4c099] ==> ignore
           arg [-L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32] ==> dir [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32]
           arg [-L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32] ==> dir [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32]
           arg [-L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32] ==> dir [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32]
@@ -2341,7 +452,7 @@ events:
           arg [-L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib] ==> dir [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib]
           arg [-L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib] ==> dir [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib]
           arg [-L/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib] ==> dir [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/usr/lib]
-          arg [CMakeFiles/cmTC_020a4.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [CMakeFiles/cmTC_4c099.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc] ==> lib [gcc]
@@ -2349,11 +460,6 @@ events:
           arg [-lnosys] ==> lib [nosys]
           arg [-lc] ==> lib [c]
           arg [-lgcc] ==> lib [gcc]
-        ignore line: [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: warning: cannot find entry symbol _start]
-        ignore line: [ defaulting to 00400074]
-        ignore line: [COLLECT_GCC_OPTIONS='-mdynconfig=xtensa_esp32.so' '-mlongcalls' '-Wno-frame-address' '-fno-builtin-memcpy' '-fno-builtin-memset' '-fno-builtin-bzero' '-fno-builtin-stpcpy' '-fno-builtin-strncpy' '-nostartfiles' '-v' '-o' 'cmTC_020a4' '-dumpdir' 'cmTC_020a4.']
-        ignore line: []
-        ignore line: []
         collapse library dir [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/esp32] ==> [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/14.2.0/esp32]
         collapse library dir [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/lib/esp32] ==> [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/lib/esp32]
         collapse library dir [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../xtensa-esp-elf/lib/esp32] ==> [/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/lib/esp32]
@@ -2371,16 +477,16 @@ events:
   -
     kind: "try_compile-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
-      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
-      - "/usr/share/cmake/Modules/FindThreads.cmake:160 (check_c_source_compiles)"
-      - "/usr/share/cmake/Modules/FindThreads.cmake:226 (_threads_check_libc)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
       - "/home/lucas/esp/esp-idf/components/mbedtls/mbedtls/CMakeLists.txt:139 (find_package)"
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "/home/lucas/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-pTNuSN"
-      binary: "/home/lucas/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-pTNuSN"
+      source: "/home/lucas/Build_Project/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-8zmqwH"
+      binary: "/home/lucas/Build_Project/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-8zmqwH"
     cmakeVariables:
       CMAKE_C_FLAGS: "-mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy"
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -2390,32 +496,32 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/home/lucas/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-pTNuSN'
+        Change Dir: '/home/lucas/Build_Project/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-8zmqwH'
         
-        Run Build Command(s): /usr/bin/ninja -v cmTC_56935
-        [1/2] /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DCMAKE_HAVE_LIBC_PTHREAD  -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o CMakeFiles/cmTC_56935.dir/src.c.obj -c /home/lucas/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-pTNuSN/src.c
-        [2/2] : && /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -nostartfiles CMakeFiles/cmTC_56935.dir/src.c.obj -o cmTC_56935   && :
-        /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: CMakeFiles/cmTC_56935.dir/src.c.obj:(.literal+0x14): warning: pthread_atfork is not implemented and will always fail
-        /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: CMakeFiles/cmTC_56935.dir/src.c.obj:(.literal+0xc): warning: pthread_cancel is not implemented and will always fail
-        /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: CMakeFiles/cmTC_56935.dir/src.c.obj:(.literal+0x4): warning: pthread_create is not implemented and will always fail
-        /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: CMakeFiles/cmTC_56935.dir/src.c.obj:(.literal+0x8): warning: pthread_detach is not implemented and will always fail
-        /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: CMakeFiles/cmTC_56935.dir/src.c.obj:(.literal+0x18): warning: pthread_exit is not implemented and will always fail
-        /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: CMakeFiles/cmTC_56935.dir/src.c.obj:(.literal+0x10): warning: pthread_join is not implemented and will always fail
+        Run Build Command(s): /usr/bin/ninja -v cmTC_4bf5d
+        [1/2] /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DCMAKE_HAVE_LIBC_PTHREAD  -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -o CMakeFiles/cmTC_4bf5d.dir/src.c.obj -c /home/lucas/Build_Project/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-8zmqwH/src.c
+        [2/2] : && /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -nostartfiles CMakeFiles/cmTC_4bf5d.dir/src.c.obj -o cmTC_4bf5d   && :
+        /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: CMakeFiles/cmTC_4bf5d.dir/src.c.obj:(.literal+0x14): warning: pthread_atfork is not implemented and will always fail
+        /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: CMakeFiles/cmTC_4bf5d.dir/src.c.obj:(.literal+0xc): warning: pthread_cancel is not implemented and will always fail
+        /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: CMakeFiles/cmTC_4bf5d.dir/src.c.obj:(.literal+0x4): warning: pthread_create is not implemented and will always fail
+        /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: CMakeFiles/cmTC_4bf5d.dir/src.c.obj:(.literal+0x8): warning: pthread_detach is not implemented and will always fail
+        /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: CMakeFiles/cmTC_4bf5d.dir/src.c.obj:(.literal+0x18): warning: pthread_exit is not implemented and will always fail
+        /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: CMakeFiles/cmTC_4bf5d.dir/src.c.obj:(.literal+0x10): warning: pthread_join is not implemented and will always fail
         /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 00400054
         
       exitCode: 0
   -
     kind: "try_compile-v1"
     backtrace:
-      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
-      - "/usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "/usr/share/cmake/Modules/CheckCCompilerFlag.cmake:105 (cmake_check_compiler_flag)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
       - "/home/lucas/esp/esp-idf/components/mbedtls/mbedtls/CMakeLists.txt:222 (CHECK_C_COMPILER_FLAG)"
     checks:
       - "Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS"
     directories:
-      source: "/home/lucas/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-gzWkdJ"
-      binary: "/home/lucas/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-gzWkdJ"
+      source: "/home/lucas/Build_Project/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-UC2xFo"
+      binary: "/home/lucas/Build_Project/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-UC2xFo"
     cmakeVariables:
       CMAKE_C_FLAGS: "-mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -Wall -Wextra -Wwrite-strings -Wmissing-prototypes -Wformat=2 -Wno-format-nonliteral -Wvla -Wlogical-op -Wshadow"
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -2425,11 +531,11 @@ events:
       variable: "C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS"
       cached: true
       stdout: |
-        Change Dir: '/home/lucas/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-gzWkdJ'
+        Change Dir: '/home/lucas/Build_Project/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-UC2xFo'
         
-        Run Build Command(s): /usr/bin/ninja -v cmTC_95818
-        [1/2] /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DC_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS  -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -Wall -Wextra -Wwrite-strings -Wmissing-prototypes -Wformat=2 -Wno-format-nonliteral -Wvla -Wlogical-op -Wshadow    -Wformat-signedness -o CMakeFiles/cmTC_95818.dir/src.c.obj -c /home/lucas/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-gzWkdJ/src.c
-        [2/2] : && /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -Wall -Wextra -Wwrite-strings -Wmissing-prototypes -Wformat=2 -Wno-format-nonliteral -Wvla -Wlogical-op -Wshadow -nostartfiles CMakeFiles/cmTC_95818.dir/src.c.obj -o cmTC_95818   && :
+        Run Build Command(s): /usr/bin/ninja -v cmTC_d51f6
+        [1/2] /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DC_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS  -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -Wall -Wextra -Wwrite-strings -Wmissing-prototypes -Wformat=2 -Wno-format-nonliteral -Wvla -Wlogical-op -Wshadow    -Wformat-signedness -o CMakeFiles/cmTC_d51f6.dir/src.c.obj -c /home/lucas/Build_Project/boat-receiver/build/CMakeFiles/CMakeScratch/TryCompile-UC2xFo/src.c
+        [2/2] : && /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -Wall -Wextra -Wwrite-strings -Wmissing-prototypes -Wformat=2 -Wno-format-nonliteral -Wvla -Wlogical-op -Wshadow -nostartfiles CMakeFiles/cmTC_d51f6.dir/src.c.obj -o cmTC_d51f6   && :
         /home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 00400054
         
       exitCode: 0

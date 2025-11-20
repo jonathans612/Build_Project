@@ -9,6 +9,7 @@
         "stack": "c",
         "thread": "c",
         "vector": "c",
-        "esp_netif.h": "c"
+        "esp_netif.h": "c",
+        "esp_eap_client.h": "c"
     }
 }

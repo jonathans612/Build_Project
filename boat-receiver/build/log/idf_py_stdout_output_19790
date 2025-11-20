@@ -1,0 +1,81 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/lucas/Build_Project/boat-receiver/build/bootloader/esp-idf/esptool_py && /home/lucas/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/lucas/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/lucas/Build_Project/boat-receiver/build/bootloader/bootloader.bin
+Bootloader binary size 0x6680 bytes. 0x980 bytes (8%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/boat_controller.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/boat_controller.c.obj 
+/home/lucas/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.5.1\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/lucas/Build_Project/boat-receiver/build/config -I/home/lucas/esp/esp-idf/components/newlib/platform_include -I/home/lucas/esp/esp-idf/components/freertos/config/include -I/home/lucas/esp/esp-idf/components/freertos/config/include/freertos -I/home/lucas/esp/esp-idf/components/freertos/config/xtensa/include -I/home/lucas/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/lucas/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/lucas/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/home/lucas/esp/esp-idf/components/freertos/esp_additions/include -I/home/lucas/esp/esp-idf/components/esp_hw_support/include -I/home/lucas/esp/esp-idf/components/esp_hw_support/include/soc -I/home/lucas/esp/esp-idf/components/esp_hw_support/include/soc/esp32 -I/home/lucas/esp/esp-idf/components/esp_hw_support/dma/include -I/home/lucas/esp/esp-idf/components/esp_hw_support/ldo/include -I/home/lucas/esp/esp-idf/components/esp_hw_support/debug_probe/include -I/home/lucas/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -I/home/lucas/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -I/home/lucas/esp/esp-idf/components/esp_hw_support/power_supply/include -I/home/lucas/esp/esp-idf/components/esp_hw_support/port/esp32/. -I/home/lucas/esp/esp-idf/components/esp_hw_support/port/esp32/include -I/home/lucas/esp/esp-idf/components/heap/include -I/home/lucas/esp/esp-idf/components/heap/tlsf -I/home/lucas/esp/esp-idf/components/log/include -I/home/lucas/esp/esp-idf/components/soc/include -I/home/lucas/esp/esp-idf/components/soc/esp32 -I/home/lucas/esp/esp-idf/components/soc/esp32/include -I/home/lucas/esp/esp-idf/components/soc/esp32/register -I/home/lucas/esp/esp-idf/components/hal/platform_port/include -I/home/lucas/esp/esp-idf/components/hal/esp32/include -I/home/lucas/esp/esp-idf/components/hal/include -I/home/lucas/esp/esp-idf/components/esp_rom/include -I/home/lucas/esp/esp-idf/components/esp_rom/esp32/include -I/home/lucas/esp/esp-idf/components/esp_rom/esp32/include/esp32 -I/home/lucas/esp/esp-idf/components/esp_rom/esp32 -I/home/lucas/esp/esp-idf/components/esp_common/include -I/home/lucas/esp/esp-idf/components/esp_system/include -I/home/lucas/esp/esp-idf/components/esp_system/port/soc -I/home/lucas/esp/esp-idf/components/esp_system/port/include/private -I/home/lucas/esp/esp-idf/components/xtensa/esp32/include -I/home/lucas/esp/esp-idf/components/xtensa/include -I/home/lucas/esp/esp-idf/components/xtensa/deprecated_include -I/home/lucas/esp/esp-idf/components/lwip/include -I/home/lucas/esp/esp-idf/components/lwip/include/apps -I/home/lucas/esp/esp-idf/components/lwip/include/apps/sntp -I/home/lucas/esp/esp-idf/components/lwip/lwip/src/include -I/home/lucas/esp/esp-idf/components/lwip/port/include -I/home/lucas/esp/esp-idf/components/lwip/port/freertos/include -I/home/lucas/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/lucas/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/lucas/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/lucas/esp/esp-idf/components/spi_flash/include -I/home/lucas/esp/esp-idf/components/nvs_flash/include -I/home/lucas/esp/esp-idf/components/esp_partition/include -I/home/lucas/esp/esp-idf/components/esp_netif/include -I/home/lucas/esp/esp-idf/components/esp_event/include -I/home/lucas/esp/esp-idf/components/esp_wifi/include -I/home/lucas/esp/esp-idf/components/esp_wifi/include/local -I/home/lucas/esp/esp-idf/components/esp_wifi/wifi_apps/include -I/home/lucas/esp/esp-idf/components/esp_wifi/wifi_apps/nan_app/include -I/home/lucas/esp/esp-idf/components/esp_phy/include -I/home/lucas/esp/esp-idf/components/esp_phy/esp32/include -I/home/lucas/esp/esp-idf/components/wpa_supplicant/include -I/home/lucas/esp/esp-idf/components/wpa_supplicant/port/include -I/home/lucas/esp/esp-idf/components/wpa_supplicant/esp_supplicant/include -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/lucas/Build_Project/boat-receiver=. -fmacro-prefix-map=/home/lucas/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/boat_controller.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/boat_controller.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/boat_controller.c.obj -c /home/lucas/Build_Project/boat-receiver/main/boat_controller.c
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c: In function 'app_main':
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:49:5: error: unknown type name 'esp_eap_client_config_t'; did you mean 'esp_eap_fast_config'?
+   49 |     esp_eap_client_config_t eap_config = {
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+      |     esp_eap_fast_config
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:50:9: error: field name not in record or union initializer
+   50 |         .eap_method = ESP_EAP_METHOD_PEAP,
+      |         ^
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:50:9: note: (near initialization for 'eap_config')
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:50:23: error: 'ESP_EAP_METHOD_PEAP' undeclared (first use in this function); did you mean 'ESP_EAP_TYPE_PEAP'?
+   50 |         .eap_method = ESP_EAP_METHOD_PEAP,
+      |                       ^~~~~~~~~~~~~~~~~~~
+      |                       ESP_EAP_TYPE_PEAP
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:50:23: note: each undeclared identifier is reported only once for each function it appears in
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:51:9: error: field name not in record or union initializer
+   51 |         .identity = (uint8_t *)"larab001@fiu.edu",
+      |         ^
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:51:9: note: (near initialization for 'eap_config')
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:51:21: warning: excess elements in scalar initializer
+   51 |         .identity = (uint8_t *)"larab001@fiu.edu",
+      |                     ^
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:51:21: note: (near initialization for 'eap_config')
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:52:9: error: field name not in record or union initializer
+   52 |         .username = (uint8_t *)"larab001@fiu.edu",
+      |         ^
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:52:9: note: (near initialization for 'eap_config')
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:52:21: warning: excess elements in scalar initializer
+   52 |         .username = (uint8_t *)"larab001@fiu.edu",
+      |                     ^
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:52:21: note: (near initialization for 'eap_config')
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:53:9: error: field name not in record or union initializer
+   53 |         .password = (uint8_t *)"HPCCangrejitos2003!",
+      |         ^
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:53:9: note: (near initialization for 'eap_config')
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:53:21: warning: excess elements in scalar initializer
+   53 |         .password = (uint8_t *)"HPCCangrejitos2003!",
+      |                     ^
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:53:21: note: (near initialization for 'eap_config')
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:54:9: error: field name not in record or union initializer
+   54 |         .phase2_method = ESP_EAP_PHASE2_METHOD_MSCHAPV2,
+      |         ^
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:54:9: note: (near initialization for 'eap_config')
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:54:26: error: 'ESP_EAP_PHASE2_METHOD_MSCHAPV2' undeclared (first use in this function)
+   54 |         .phase2_method = ESP_EAP_PHASE2_METHOD_MSCHAPV2,
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:54:26: warning: excess elements in scalar initializer
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:54:26: note: (near initialization for 'eap_config')
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:55:9: error: field name not in record or union initializer
+   55 |         .disable_time_check = true,  // optional, if your cert has clock issues
+      |         ^
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:55:9: note: (near initialization for 'eap_config')
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:55:31: warning: excess elements in scalar initializer
+   55 |         .disable_time_check = true,  // optional, if your cert has clock issues
+      |                               ^~~~
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:55:31: note: (near initialization for 'eap_config')
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:56:9: error: field name not in record or union initializer
+   56 |         .skip_common_name_check = true,  // often needed for eduroam
+      |         ^
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:56:9: note: (near initialization for 'eap_config')
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:56:35: warning: excess elements in scalar initializer
+   56 |         .skip_common_name_check = true,  // often needed for eduroam
+      |                                   ^~~~
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:56:35: note: (near initialization for 'eap_config')
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:59:5: error: implicit declaration of function 'esp_eap_client_set_config'; did you mean 'esp_eap_client_set_pac_file'? [-Wimplicit-function-declaration]
+   59 |     esp_eap_client_set_config(&eap_config);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |     esp_eap_client_set_pac_file
+/home/lucas/Build_Project/boat-receiver/main/boat_controller.c:60:5: error: implicit declaration of function 'esp_eap_client_enable'; did you mean 'esp_cpu_intr_enable'? [-Wimplicit-function-declaration]
+   60 |     esp_eap_client_enable();
+      |     ^~~~~~~~~~~~~~~~~~~~~
+      |     esp_cpu_intr_enable
+ninja: build stopped: subcommand failed.

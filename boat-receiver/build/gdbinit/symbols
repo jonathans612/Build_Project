@@ -18,8 +18,8 @@ end
 
 # Load bootloader symbols
 set confirm off
-    add-symbol-file /home/lucas/boat-receiver/build/bootloader/bootloader.elf
+    add-symbol-file /home/lucas/Build_Project/boat-receiver/build/bootloader/bootloader.elf
 set confirm on
 
 # Load application symbols
-file /home/lucas/boat-receiver/build/hello_world.elf
+file /home/lucas/Build_Project/boat-receiver/build/hello_world.elf

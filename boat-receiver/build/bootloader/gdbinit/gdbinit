@@ -1,2 +1,2 @@
-source /home/lucas/boat-receiver/build/bootloader/gdbinit/symbols
-source /home/lucas/boat-receiver/build/bootloader/gdbinit/connect
+source /home/lucas/Build_Project/boat-receiver/build/bootloader/gdbinit/symbols
+source /home/lucas/Build_Project/boat-receiver/build/bootloader/gdbinit/connect

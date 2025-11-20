@@ -1,4 +1,4 @@
-/* * Data converted from /home/lucas/boat-receiver/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from /home/lucas/Build_Project/boat-receiver/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 #if !defined (__APPLE__) && !defined (__linux__)
