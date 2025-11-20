@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  broker:
+    image: eclipse-mosquitto:2
+    container_name: broker
+    restart: unless-stopped
+    ports:
+      - "1883:1883"      # MQTT (TCP)
+      # Uncomment if you want websockets later:
+      # - "9001:9001"
+      # Uncomment for TLS later (must configure certs):
+      # - "8883:8883"
+    volumes:
+      - ./config:/mosquitto/config
+      - ./data:/mosquitto/data
+      - ./log:/mosquitto/log
+    # Optional: limit resources
+    # deploy:
+    #   resources:
+    #     limits:
+    #       memory: 128M

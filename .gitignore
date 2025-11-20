@@ -3,3 +3,9 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+
+mosquitto/data/
+mosquitto/log/
+mosquitto/config/password.txt
+.env
+mounts.json

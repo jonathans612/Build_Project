@@ -17,7 +17,7 @@
 // !!! IMPORTANT: REPLACE with your details !!!
 #define WIFI_SSID      "YOUR_WIFI_SSID"
 #define WIFI_PASS      "YOUR_WIFI_PASSWORD"
-#define MQTT_BROKER_URL "mqtt://YOUR_MQTT_BROKER_IP_OR_URL" // e.g., "mqtt://192.168.1.100"
+#define MQTT_BROKER_URL "mqtt://YOUR_MQTT_BROKER_IP_OR_URL" // e.g., "mqtt://192.168.1.100:1883"
 
 // --- TAGs for logging ---
 static const char *TAG_APP = "APP";
@@ -123,6 +123,9 @@ public:
         // 5. Configure and start MQTT
         esp_mqtt_client_config_t mqtt_cfg = {};
         mqtt_cfg.broker.address.uri = MQTT_BROKER_URL;
+
+        mqtt_cfg.credentials.username = "YOUR_USERNAME";  // replace with the username you set using mosquitto_passwd
+        mqtt_cfg.credentials.authentication.password = "YOUR_PASSWORD";  // replace with the password you set using mosquitto_passwd
         
         client = esp_mqtt_client_init(&mqtt_cfg);
         esp_mqtt_client_register_event(client, (esp_mqtt_event_id_t)ESP_EVENT_ANY_ID, mqtt_event_handler, this);
@@ -215,21 +218,13 @@ public:
                             // case MINMEA_SENTENCE_GSV: {
                             //     struct minmea_sentence_gsv frame;
                             //     if (minmea_parse_gsv(&frame, line)) {
-                            //         ESP_LOGI(TAG_GPS, "GSV: Sats in view: %d (Msg %d of %d)",
-                            //             frame.total_sats,
-                            //             frame.msg_nr,
-                            //             frame.total_msgs
-                            //         );
-                            //         for (int i = 0; i < 4; i++) {
-                            //             if (frame.sats[i].nr != 0) {
-                            //                  ESP_LOGI(TAG_GPS, "  - Sat %02d: SNR: %d dB, Elev: %d, Azim: %d",
-                            //                     frame.sats[i].nr,
-                            //                     frame.sats[i].snr,
-                            //                     frame.sats[i].elevation,
-                            //                     frame.sats[i].azimuth
-                            //                  );
-                            //             }
-                            //         }
+                            //         // Publish to a separate "diagnostic" topic
+                            //         std::ostringstream payload;
+                            //         payload << "{\"total_sats\":" << frame.total_sats
+                            //                 << ",\"msg_nr\":" << frame.msg_nr
+                            //                 << ",\"total_msgs\":" << frame.total_msgs
+                            //                 << "}";
+                            //         if(g_mqtt_client) g_mqtt_client->publish("gps/diag/sats_in_view", payload.str());
                             //     }
                             // } break;
                         
