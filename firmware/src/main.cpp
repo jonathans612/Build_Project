@@ -6,6 +6,7 @@
 #include <vector>
 #include <string>
 #include <cstring>
+#include "minmea.h" // Include the minmea library header
 
 // --- TAGs for logging ---
 static const char *TAG_APP = "APP";
@@ -37,7 +38,6 @@ public:
             .source_clk = UART_SCLK_DEFAULT,
         };
         
-        // Install UART driver. Increased buffer slightly.
         ESP_ERROR_CHECK(uart_driver_install(uart_num, 2048, 0, 0, NULL, 0));
         ESP_ERROR_CHECK(uart_param_config(uart_num, &uart_config));
         ESP_ERROR_CHECK(uart_set_pin(uart_num, tx_pin, rx_pin, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE));
@@ -46,28 +46,74 @@ public:
 
     void task_loop()
     {
-        // Allocate buffer on Heap (std::vector) outside the loop to save CPU cycles
         std::vector<uint8_t> data(1024);
-
         while (true)
         {
-            // Read data from the UART
             int len = uart_read_bytes(uart_num, data.data(), data.size() - 1, pdMS_TO_TICKS(1000));
             
             if (len > 0)
             {
-                data[len] = '\0'; // Null terminate manually to be safe for printing
-                
-                // 1. Print raw string (This is NMEA format)
-                printf("%s", (char*)data.data());
+                data[len] = '\0';
 
-                // OPTIONAL: Simple parser logic to prove data is correct
-                // Check for $GPGLL line for simple lat/long check
-                char* gll = strstr((char*)data.data(), "$GPGLL");
-                if (gll) {
-                    ESP_LOGI(TAG_GPS, "Found GLL Sentence, raw data is valid!");
-                    // Note: To get "Google Maps" coordinates, you must parse
-                    // the DDMM.MMMM format to DD.DDDD.
+                // Tokenize the buffer by newline characters
+                char* line = strtok((char*)data.data(), "\r\n");
+                while (line != NULL)
+                {
+                    // Only parse valid sentences
+                    if (minmea_check(line, false))
+                    {
+                        switch (minmea_sentence_id(line, false)) // Add 'false' for non-strict parsing
+                        {
+                            case MINMEA_SENTENCE_RMC: {
+                                struct minmea_sentence_rmc frame;
+                                if (minmea_parse_rmc(&frame, line)) {
+                                    ESP_LOGI(TAG_GPS, "RMC: Lat: %f, Lon: %f, Speed: %f, Date: %02d/%02d/%02d",
+                                        minmea_tocoord(&frame.latitude),
+                                        minmea_tocoord(&frame.longitude),
+                                        minmea_tofloat(&frame.speed),
+                                        frame.date.day, frame.date.month, frame.date.year
+                                    );
+                                }
+                            } break;
+
+                            case MINMEA_SENTENCE_GGA: {
+                                struct minmea_sentence_gga frame;
+                                if (minmea_parse_gga(&frame, line)) {
+                                    ESP_LOGI(TAG_GPS, "GGA: Fix Quality: %d, Sats: %d, Alt: %f",
+                                        frame.fix_quality,
+                                        frame.satellites_tracked,
+                                        minmea_tofloat(&frame.altitude)
+                                    );
+                                }
+                            } break;
+
+                            case MINMEA_SENTENCE_GSV: {
+                                struct minmea_sentence_gsv frame;
+                                if (minmea_parse_gsv(&frame, line)) {
+                                    ESP_LOGI(TAG_GPS, "GSV: Sats in view: %d (Msg %d of %d)",
+                                        frame.total_sats,
+                                        frame.msg_nr,
+                                        frame.total_msgs
+                                    );
+                                    for (int i = 0; i < 4; i++) {
+                                        if (frame.sats[i].nr != 0) {
+                                             ESP_LOGI(TAG_GPS, "  - Sat %02d: SNR: %d dB, Elev: %d, Azim: %d",
+                                                frame.sats[i].nr,
+                                                frame.sats[i].snr,
+                                                frame.sats[i].elevation,
+                                                frame.sats[i].azimuth
+                                             );
+                                        }
+                                    }
+                                }
+                            } break;
+                        
+                            default:
+                                break;
+                        }
+                    }
+                    // Move to the next line in the buffer
+                    line = strtok(NULL, "\r\n");
                 }
             }
         }
@@ -181,21 +227,15 @@ extern "C" void app_main(void)
 {
     ESP_LOGI(TAG_APP, "Starting Application");
 
-    // --- Create LED ---
     static LED led(GPIO_NUM_2);
     TaskHandle_t led_task_handle;
     xTaskCreate(LED::start_task, "LED_Task", 2048, &led, 5, &led_task_handle);
     led.set_task_handle(led_task_handle);
 
-    // --- Create Button ---
     static Button button(GPIO_NUM_0, led.get_task_handle());
     xTaskCreate(Button::start_task, "Button_Task", 2048, &button, 10, NULL);
 
-    // --- Create GPS ---
     static GpsReader gps(UART_NUM_2, GPIO_NUM_17, GPIO_NUM_16, 9600);
-    
-    // FIX: Increased stack size from 4096 to 8192 to prevent overflow if you add heavy parsing later
-    // I also removed the print_buffer_hex function which was the specific cause of the crash
     xTaskCreate(GpsReader::start_task, "GPS_Task", 8192, &gps, 5, NULL);
 
     ESP_LOGI(TAG_APP, "All tasks created.");
