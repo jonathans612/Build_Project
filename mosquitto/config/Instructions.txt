@@ -1,0 +1,36 @@
+This sequence reliably brings up the broker, flashes the device, and confirms end-to-end GPS publishing.
+
+1. Start Docker Desktop
+• Ensure Docker Desktop is running and healthy (daemon started).
+
+2. Launch the Mosquitto broker
+• In a terminal, go to your project’s mosquitto directory: cd [Path to your repo]\Build_Project\mosquitto
+• Start the broker: docker compose up -d
+• Verify it’s running and port is published: docker ps --filter "name=broker" --format "table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}" Expect: broker Up ... 0.0.0.0:1883->1883/tcp
+
+3. Initialize and build the firmware in VS Code (PlatformIO)
+• Open the repo folder in VS Code.
+• Make sure PlatformIO extension is installed and the correct environment/board is selected.
+• If first time or after changes, run:
+	• Clean (optional): PlatformIO: Clean
+	• Build: PlatformIO: Build
+
+4. Upload the firmware to ESP32
+• Connect the ESP32 via USB.
+• Use PlatformIO: Upload (or the upload button) to flash the firmware.
+• Monitor the device and verify network/MQTT connection
+
+5. Open PlatformIO: Monitor.
+• Confirm logs show:
+	• Wi‑Fi connected and IP assigned
+	• MQTT_EVENT_CONNECTED
+
+6. Verify GPS data via the broker (inside container)
+• In a separate terminal, subscribe to the GPS topic with credentials: docker exec -it broker mosquitto_sub -h localhost -p 1883 -u esp32 -P [your pass] -t 'gps/location' -v
+• You should see messages like: gps/location {"lat":..., "lon":..., "speed":...}
+
+Optional checks and tips:
+• Subscribe to all GPS topics: docker exec -it broker mosquitto_sub -h localhost -p 1883 -u esp32 -P [your pass] -t 'gps/#' -v
+• If you need to test from the host (outside the container), use [your IPv4 addy] and the same credentials: docker run --rm eclipse-mosquitto mosquitto_sub -h [your IPv4 addy] -p 1883 -u esp32 -P [your pass] -t 'gps/location' -v
+• If authentication errors appear, ensure your firmware sets MQTT username/password and that mosquitto.conf points to the correct password_file.
+• For serial visibility of coordinates, add logging lines in firmware near publish: ESP_LOGI("GPS", "lat=%.6f lon=%.6f speed=%.2f", lat, lon, speed);
