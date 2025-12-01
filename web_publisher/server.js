@@ -6,7 +6,7 @@ const mqtt = require('mqtt');
 
 const protocol = 'mqtt'
 const host = 'https://test.mosquitto.org/'
-const port = '8080'
+const port = '1883'
 const clientId = `mqtt_${Math.random().toString(16).slice(3)}`
 let topic="init_boat/controller"
 
