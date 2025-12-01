@@ -5,10 +5,10 @@ const path = require('path');
 const mqtt = require('mqtt');
 
 const protocol = 'mqtt'
-const host = '192.168.1.104'
-const port = '1883'
+const host = 'https://test.mosquitto.org/'
+const port = '8080'
 const clientId = `mqtt_${Math.random().toString(16).slice(3)}`
-let topic="keyboard/arrow"
+let topic="init_boat/controller"
 
 const connectUrl = `${protocol}://${host}:${port}`
 
@@ -95,89 +95,55 @@ io.on('connection', (socket) => {
   }
   logWaiting();
 
-    socket.on('toggle-motor', () => {
+    socket.on('left', () => {
         if (socket.id !== controller) {
         console.log('Unauthorized click from:', socket.id);
         socket.emit('cheater-detected');
         return;
         }
-        console.log('Toggle Motor clicked by:', socket.id);
-        client.publish(topic, 'MOTOR toggle', { qos: 0, retain: false }, (error) => {
+        console.log('LEFT clicked by:', socket.id);
+        client.publish(topic, 'left', { qos: 0, retain: false }, (error) => {
             if (error) {
             console.error(error)
             }
         })
     });
-    socket.on('rudder-left', () => {
+    socket.on('right', () => {
         if (socket.id !== controller) {
         console.log('Unauthorized click from:', socket.id);
         socket.emit('cheater-detected');
         return;
         }
-        console.log('Rudder Left clicked by:', socket.id);
-        client.publish(topic, 'RUDDER rot -30', { qos: 0, retain: false }, (error) => {
+        console.log('RIGHT clicked by:', socket.id);
+        client.publish(topic, 'right', { qos: 0, retain: false }, (error) => {
             if (error) {
             console.error(error)
             }
         })
     });
-    socket.on('rudder-right', () => {
+    socket.on('up', () => {
         if (socket.id !== controller) {
         console.log('Unauthorized click from:', socket.id);
         socket.emit('cheater-detected');
         return;
         }
-        console.log('Rudder Right clicked by:', socket.id);
-        client.publish(topic, 'RUDDER rot 30', { qos: 0, retain: false }, (error) => {
+        console.log('UP clicked by:', socket.id);
+        client.publish(topic, 'up', { qos: 0, retain: false }, (error) => {
             if (error) {
             console.error(error)
             }
         })
     });
 
-    socket.on('joystick-move', (data) => {
+    socket.on('down', (data) => {
         if (socket.id !== controller) {
         console.log('Unauthorized joystick from:', socket.id);
         socket.emit('cheater-detected');
         return;
         }
-        // data = { x, y, force, angle }
-        // only use x, y, and angle
-        console.log('Joystick:', socket.id, data);
+        console.log('DOWN clicked by:', socket.id);
 
-        let angle = Math.max(-60, Math.min(60, Math.round(data.x)));
-
-        let distance = Math.sqrt(data.x * data.x + data.y * data.y);
-        distance = Math.min(1, distance);
-
-        let thrust = -Math.sign(data.y) * distance * 100;
-
-        if (Math.abs(data.y) < 0.1) {
-            thrust = distance * 100;
-        }
-
-        client.publish(topic, `RUDDER set ${angle}`, { qos: 0, retain: false }, (error) => {
-            if (error) {
-            console.error(error)
-            }
-        })
-        client.publish(topic, `MOTOR set ${thrust}`, { qos: 0, retain: false }, (error) => {
-            if (error) {
-            console.error(error)
-            }
-        })
-    });
-
-    socket.on('joystick-end', () => {
-        if (socket.id === controller) {
-        console.log('Joystick released by:', socket.id);
-        }
-        client.publish(topic, `RUDDER set 0`, { qos: 0, retain: false }, (error) => {
-            if (error) {
-            console.error(error)
-            }
-        })
-        client.publish(topic, `MOTOR set 0`, { qos: 0, retain: false }, (error) => {
+        client.publish(topic, `down`, { qos: 0, retain: false }, (error) => {
             if (error) {
             console.error(error)
             }

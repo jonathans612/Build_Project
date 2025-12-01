@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Secure Device Controller</title>
-    <script src="https://cdn.jsdelivr.net/npm/nipplejs@0.10.2/dist/nipplejs.min.js"></script>  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         body { 
             font-family: Arial, sans-serif; 
@@ -40,17 +40,36 @@
             background: #2196F3; 
             color: white; 
             border: none; 
-            border-radius: 10px; 
-            margin: 20px 10px;
+            border-radius: 10px;
+            user-select: none;
+            -webkit-user-select: none;
         }
-        #joystick-container { 
-            width: 250px; 
-            height: 250px; 
-            margin: 30px auto; 
-            background: #eee; 
-            border-radius: 50%; 
-            border: 6px solid #333;
-            position: relative;
+        button:active {
+            background: #1976D2;
+        }
+        #button-container {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 10px;
+            margin: 20px auto;
+            width: fit-content;
+        }
+        #motor-up {
+            grid-column: 2;
+            grid-row: 1;
+        }
+        #motor-left {
+            grid-column: 1;
+            grid-row: 2;
+        }
+        #motor-right {
+            grid-column: 3;
+            grid-row: 2;
+        }
+        #motor-down {
+            grid-column: 2;
+            grid-row: 3;
         }
         #waiting { 
             color: #e74c3c; 
@@ -72,8 +91,6 @@
     <div id="control-panel" style="display:none;">
         <p style="color:green; font-weight:bold; font-size:22px;">You are in control</p>
         <div id="button-container"></div>
-        <div id="joystick-container"></div>
-        <small>Move the joystick to control the device</small>
     </div>
 
     <div id="waiting" style="display:none;">
@@ -83,131 +100,135 @@
     </div>
 
     <script src="/socket.io/socket.io.js"></script>
-   <script>
-    const socket = io();
+    <script>
+        const socket = io();
 
-    const controlPanel = document.getElementById('control-panel');
-    const waiting = document.getElementById('waiting');
-    const buttonContainer = document.getElementById('button-container');
-    const joystickContainer = document.getElementById('joystick-container');
-    const status = document.getElementById('status');
-    const idDisplay = document.getElementById('id-display');
-    const queuePos = document.getElementById('queue-pos');
+        const controlPanel = document.getElementById('control-panel');
+        const waiting = document.getElementById('waiting');
+        const buttonContainer = document.getElementById('button-container');
+        const status = document.getElementById('status');
+        const idDisplay = document.getElementById('id-display');
+        const queuePos = document.getElementById('queue-pos');
 
-    let joystick = null;
-    let isController = false;
-    let lastJoystickSent = 0;
-    const JOYSTICK_THROTTLE_MS = 500; // 2 per second max
+        let isController = false;
+        let buttonIntervals = {};
 
-    socket.on('your-id', (id) => {
-        idDisplay.textContent = id;
-    });
-
-    const createJoystick = () => {
-        if (joystick) joystick.destroy();
-
-        joystick = nipplejs.create({
-            zone: joystickContainer,
-            mode: 'static',
-            position: { left: '50%', top: '50%' },
-            color: '#2196F3',
-            size: 120
+        socket.on('your-id', (id) => {
+            idDisplay.textContent = id;
         });
 
-        joystick.on('move', (evt, data) => {
-            if (!isController) return;
+        const startButtonPress = (direction, eventName) => {
+            if (!isController || buttonIntervals[direction]) return;
+            
+            socket.emit(eventName);
+            
+            buttonIntervals[direction] = setInterval(() => {
+                socket.emit(eventName);
+            }, 200);
+        };
 
-            const now = Date.now();
-            if (now - lastJoystickSent < JOYSTICK_THROTTLE_MS) return; // Throttle
+        const stopButtonPress = (direction) => {
+            if (buttonIntervals[direction]) {
+                clearInterval(buttonIntervals[direction]);
+                delete buttonIntervals[direction];
+            }
+        };
 
-            lastJoystickSent = now;
+        const showControl = () => {
+            controlPanel.style.display = 'inline-block';
+            waiting.style.display = 'none';
+            status.textContent = 'You have control';
+            status.style.color = 'green';
+            queuePos.textContent = '0';
+            isController = true;
 
-            socket.emit('joystick-move', {
-                x: data.vector.x.toFixed(3),
-                y: -data.vector.y.toFixed(3),
-                force: data.force ? data.force.toFixed(3) : 0,
-                angle: data.angle.degree.toFixed(1)
+            buttonContainer.innerHTML = `
+                <button id="motor-up">
+                    <i class="bi bi-arrow-up"></i>
+                </button>
+                <button id="motor-left">
+                    <i class="bi bi-arrow-left"></i>
+                </button>
+                <button id="motor-right">
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+                <button id="motor-down">
+                    <i class="bi bi-arrow-down"></i>
+                </button>
+            `;
+
+            const upBtn = document.getElementById('motor-up');
+            upBtn.addEventListener('mousedown', () => startButtonPress('up', 'up'));
+            upBtn.addEventListener('mouseup', () => stopButtonPress('up'));
+            upBtn.addEventListener('mouseleave', () => stopButtonPress('up'));
+            upBtn.addEventListener('touchstart', (e) => { e.preventDefault(); startButtonPress('up', 'up'); });
+            upBtn.addEventListener('touchend', (e) => { e.preventDefault(); stopButtonPress('up'); });
+
+            const downBtn = document.getElementById('motor-down');
+            downBtn.addEventListener('mousedown', () => startButtonPress('down', 'down'));
+            downBtn.addEventListener('mouseup', () => stopButtonPress('down'));
+            downBtn.addEventListener('mouseleave', () => stopButtonPress('down'));
+            downBtn.addEventListener('touchstart', (e) => { e.preventDefault(); startButtonPress('down', 'down'); });
+            downBtn.addEventListener('touchend', (e) => { e.preventDefault(); stopButtonPress('down'); });
+
+            const leftBtn = document.getElementById('motor-left');
+            leftBtn.addEventListener('mousedown', () => startButtonPress('left', 'left'));
+            leftBtn.addEventListener('mouseup', () => stopButtonPress('left'));
+            leftBtn.addEventListener('mouseleave', () => stopButtonPress('left'));
+            leftBtn.addEventListener('touchstart', (e) => { e.preventDefault(); startButtonPress('left', 'left'); });
+            leftBtn.addEventListener('touchend', (e) => { e.preventDefault(); stopButtonPress('left'); });
+
+            const rightBtn = document.getElementById('motor-right');
+            rightBtn.addEventListener('mousedown', () => startButtonPress('right', 'right'));
+            rightBtn.addEventListener('mouseup', () => stopButtonPress('right'));
+            rightBtn.addEventListener('mouseleave', () => stopButtonPress('right'));
+            rightBtn.addEventListener('touchstart', (e) => { e.preventDefault(); startButtonPress('right', 'right'); });
+            rightBtn.addEventListener('touchend', (e) => { e.preventDefault(); stopButtonPress('right'); });
+        };
+
+        const showWaiting = () => {
+            controlPanel.style.display = 'none';
+            waiting.style.display = 'block';
+            buttonContainer.innerHTML = '';
+            status.textContent = 'Waiting for control...';
+            status.style.color = 'orange';
+            isController = false;
+            queuePos.textContent = '?';
+            
+            Object.keys(buttonIntervals).forEach(key => {
+                clearInterval(buttonIntervals[key]);
+                delete buttonIntervals[key];
             });
+        };
+
+        socket.on('connect', () => {
+            socket.emit('request-control');
         });
 
-        joystick.on('end', () => {
-            if (!isController) return;
+        socket.on('control-granted', () => {
+            isController = true;
+            showControl();
+        });
 
-            const now = Date.now();
-            if (now - lastJoystickSent >= JOYSTICK_THROTTLE_MS) {
-                lastJoystickSent = now;
-                socket.emit('joystick-end');
+        socket.on('control-denied', showWaiting);
+        socket.on('control-released', () => socket.emit('request-control'));
+
+        socket.on('cheater-detected', () => {
+            alert('Cheating detected! Access revoked.');
+            showWaiting();
+        });
+
+        socket.on('rate-limited', () => {
+            alert('Too fast! Slow down.');
+        });
+
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) {
+                socket.emit('request-control');
             }
         });
-    };
 
-    const showControl = () => {
-        controlPanel.style.display = 'inline-block';
-        waiting.style.display = 'none';
-        status.textContent = 'You have control';
-        status.style.color = 'green';
-        queuePos.textContent = '0';
-        isController = true;
-        lastJoystickSent = 0; // Reset throttle
-
-        buttonContainer.innerHTML = `<button id="rudder-left">Rudder Left 30°</button>`;
-        buttonContainer.innerHTML += `<button id="toggle-motor">Toggle Motor</button>`;
-        buttonContainer.innerHTML += `<button id="rudder-right">Rudder Right 30°</button>`;
-        document.getElementById('toggle-motor').onclick = () => {
-            socket.emit('toggle-motor');
-        };
-        document.getElementById('rudder-left').onclick = () => {
-            socket.emit('rudder-left');
-        };
-        document.getElementById('rudder-right').onclick = () => {
-            socket.emit('rudder-right');
-        };
-
-        createJoystick();
-    };
-
-    const showWaiting = () => {
-        controlPanel.style.display = 'none';
-        waiting.style.display = 'block';
-        buttonContainer.innerHTML = '';
-        status.textContent = 'Waiting for control...';
-        status.style.color = 'orange';
-        isController = false;
-        queuePos.textContent = '?';
-        if (joystick) {
-            joystick.destroy();
-            joystick = null;
-        }
-    };
-
-    socket.on('connect', () => {
         socket.emit('request-control');
-    });
-
-    socket.on('control-granted', () => {
-        isController = true;
-        showControl();
-    });
-
-    socket.on('control-denied', showWaiting);
-    socket.on('control-released', () => socket.emit('request-control'));
-
-    socket.on('cheater-detected', () => {
-        alert('Cheating detected! Access revoked.');
-        showWaiting();
-    });
-
-    socket.on('rate-limited', () => {
-        alert('Too fast! Slow down.');
-    });
-
-    document.addEventListener('visibilitychange', () => {
-        if (!document.hidden) {
-            socket.emit('request-control');
-        }
-    });
-
-    socket.emit('request-control');
-</script>
+    </script>
 </body>
 </html>
