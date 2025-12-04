@@ -5,10 +5,10 @@ const path = require('path');
 const mqtt = require('mqtt');
 
 const protocol = 'mqtt'
-const host = 'https://test.mosquitto.org/'
+const host = 'test.mosquitto.org/'
 const port = '1883'
 const clientId = `mqtt_${Math.random().toString(16).slice(3)}`
-let topic="init_boat/controller"
+let topic="web/initbuild2025/boat/movement"
 
 const connectUrl = `${protocol}://${host}:${port}`
 
@@ -102,7 +102,7 @@ io.on('connection', (socket) => {
         return;
         }
         console.log('LEFT clicked by:', socket.id);
-        client.publish(topic, 'left', { qos: 0, retain: false }, (error) => {
+        client.publish(topic, 'L', { qos: 0, retain: false }, (error) => {
             if (error) {
             console.error(error)
             }
@@ -115,7 +115,7 @@ io.on('connection', (socket) => {
         return;
         }
         console.log('RIGHT clicked by:', socket.id);
-        client.publish(topic, 'right', { qos: 0, retain: false }, (error) => {
+        client.publish(topic, 'R', { qos: 0, retain: false }, (error) => {
             if (error) {
             console.error(error)
             }
@@ -128,7 +128,7 @@ io.on('connection', (socket) => {
         return;
         }
         console.log('UP clicked by:', socket.id);
-        client.publish(topic, 'up', { qos: 0, retain: false }, (error) => {
+        client.publish(topic, 'U', { qos: 0, retain: false }, (error) => {
             if (error) {
             console.error(error)
             }
@@ -143,7 +143,7 @@ io.on('connection', (socket) => {
         }
         console.log('DOWN clicked by:', socket.id);
 
-        client.publish(topic, `down`, { qos: 0, retain: false }, (error) => {
+        client.publish(topic, 'D', { qos: 0, retain: false }, (error) => {
             if (error) {
             console.error(error)
             }
