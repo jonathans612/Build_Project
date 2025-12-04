@@ -1,4 +1,4 @@
-idf_component_register(SRCS "boat_controller.c" "wifi_functions.c" "mqtt_functions.c"
+idf_component_register(SRCS "boat_controller.c" "wifi_functions.c" "mqtt_functions.c" "motor_driver.c"
                        PRIV_REQUIRES 
                             spi_flash 
                             nvs_flash

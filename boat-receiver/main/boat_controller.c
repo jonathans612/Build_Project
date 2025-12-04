@@ -1,6 +1,7 @@
 #include "header.h"
 #include "mqtt_start.h"
 #include "wifi_functions.c"
+#include "motor_driver.h"
 
 #define log(tag, format, ...) ESP_LOGI(tag, format, ##__VA_ARGS__)
 
@@ -21,5 +22,7 @@ void app_main(void)
     // Start MQTT handling 
     // NOTE: MQTT handler logic will be defined in a separate file and invoked in the mqtt_functions.c code
     mqtt_start();
+
+    esc_init();
 
 }

@@ -1,23 +1,24 @@
 #include "header.h"
 #include "mqtt_start.h"
+#include "motor_driver.h"
 
 #define BROKER_URI "mqtt://test.mosquitto.org:1883"
 #define TOPIC "web/initbuild2025/boat/movement"
 
 static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event_id, void *event_data)
 {
+    // event->data is provided as char*
     esp_mqtt_event_handle_t event = event_data;
 
     switch ((esp_mqtt_event_id_t)event_id) {
         case MQTT_EVENT_CONNECTED:
-            printf("MQTT connected\n");
+            ESP_LOGI("MQTT", "MQTT connected\n");
             esp_mqtt_client_subscribe(event->client, TOPIC, 0);
             break;
 
         case MQTT_EVENT_DATA:
-            printf("Message received!\n");
-            printf("Topic: %.*s\n", event->topic_len, event->topic);
-            printf("Data : %.*s\n", event->data_len, event->data);
+            direction_t direction = event->data[0];
+            driver(direction);
             break;
 
         default:

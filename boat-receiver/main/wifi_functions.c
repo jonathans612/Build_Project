@@ -10,7 +10,7 @@ static void event_handler(void *arg, esp_event_base_t event_base, int32_t event_
     }
 
     if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED) {
-        esp_wifi_connect();  // retry
+        esp_wifi_connect();  
     }
 
     if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
