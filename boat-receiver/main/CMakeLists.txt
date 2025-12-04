@@ -1,4 +1,4 @@
-idf_component_register(SRCS "boat_controller.c" "wifi_functions.c"
+idf_component_register(SRCS "boat_controller.c" "wifi_functions.c" "mqtt_functions.c"
                        PRIV_REQUIRES 
                             spi_flash 
                             nvs_flash
@@ -6,4 +6,5 @@ idf_component_register(SRCS "boat_controller.c" "wifi_functions.c"
                             esp_event
                             esp_wifi
                             wpa_supplicant
+                            mqtt
                        INCLUDE_DIRS "")
