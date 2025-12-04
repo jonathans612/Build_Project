@@ -24,5 +24,4 @@ void app_main(void)
     mqtt_start();
 
     esc_init();
-
 }

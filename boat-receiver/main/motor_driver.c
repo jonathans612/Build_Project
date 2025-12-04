@@ -2,14 +2,15 @@
 #include "motor_driver.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "driver/ledc.h"
 
-// --- GPIOs for ESCs ---
-#define LEFT_ESC_GPIO  18
-#define RIGHT_ESC_GPIO 19
+#define LEFT_ESC_GPIO 27 
+#define RIGHT_ESC_GPIO 14
 static int max_duty;
 
-// --- PWM initialization ---
+// Initialize pwm stuff
 void esc_init() {
+    // Timer
     ledc_timer_config_t timer = {
         .speed_mode = LEDC_LOW_SPEED_MODE,
         .timer_num = LEDC_TIMER_0,
@@ -19,8 +20,10 @@ void esc_init() {
     };
     ledc_timer_config(&timer);
 
+    // Duty
     max_duty = (1 << 15) - 1;
 
+    // Individual motor channels
     ledc_channel_config_t channels[2] = {
         {.gpio_num=LEFT_ESC_GPIO, .speed_mode=LEDC_LOW_SPEED_MODE, .channel=LEDC_CHANNEL_0, .timer_sel=LEDC_TIMER_0},
         {.gpio_num=RIGHT_ESC_GPIO, .speed_mode=LEDC_LOW_SPEED_MODE, .channel=LEDC_CHANNEL_1, .timer_sel=LEDC_TIMER_0}
@@ -28,30 +31,36 @@ void esc_init() {
     for (int i=0;i<2;i++) ledc_channel_config(&channels[i]);
 }
 
-// --- Send pulse to ESC ---
-void esc_set_us(ledc_channel_t ch, int us) {
+// Set motor speed based on channel
+void esc_set_us(int channel, int us) {
     int duty = (us * max_duty) / 20000;  // 20 ms period
-    ledc_set_duty(LEDC_LOW_SPEED_MODE, ch, duty);
-    ledc_update_duty(LEDC_LOW_SPEED_MODE, ch);
+    ledc_set_duty(LEDC_LOW_SPEED_MODE, channel, duty);
+    ledc_update_duty(LEDC_LOW_SPEED_MODE, channel);
 }
 
-void driver(direction_t input) {
-    switch(input) {
-        case UP:
-            ESP_LOGI("DRIVER", "UP");
-            // forward 
-            break;
-        case DOWN:
-            ESP_LOGI("DRIVER", "DOWN");
-            // back
-            break;
-        case LEFT:
-            ESP_LOGI("DRIVER", "LEFT");
-            // turn left
-            break;
-        case RIGHT:
-            ESP_LOGI("DRIVER", "RIGHT");
-            // turn right
-            break;
+void driver(direction_t input)
+{
+    switch (input)
+    {
+    case UP:
+        ESP_LOGI("DRIVER", "UP");
+        esc_set_us(LEDC_CHANNEL_0, 1700);
+        esc_set_us(LEDC_CHANNEL_1, 1700);
+        break;
+    case DOWN:
+        ESP_LOGI("DRIVER", "DOWN");
+        esc_set_us(LEDC_CHANNEL_0, 1000);
+        esc_set_us(LEDC_CHANNEL_1, 1000);
+        break;
+    case LEFT:
+        ESP_LOGI("DRIVER", "LEFT");
+        esc_set_us(LEDC_CHANNEL_0, 1700);
+        esc_set_us(LEDC_CHANNEL_1, 1000);
+        break;
+    case RIGHT:
+        ESP_LOGI("DRIVER", "RIGHT");
+        esc_set_us(LEDC_CHANNEL_0, 1000);
+        esc_set_us(LEDC_CHANNEL_1, 1700);
+        break;
     }
 }

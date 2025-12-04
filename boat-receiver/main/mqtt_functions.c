@@ -1,5 +1,6 @@
 #include "header.h"
 #include "mqtt_start.h"
+#include "mqtt_client.h"
 #include "motor_driver.h"
 
 #define BROKER_URI "mqtt://test.mosquitto.org:1883"
@@ -12,7 +13,7 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
 
     switch ((esp_mqtt_event_id_t)event_id) {
         case MQTT_EVENT_CONNECTED:
-            ESP_LOGI("MQTT", "MQTT connected\n");
+            ESP_LOGI("MQTT","MQTT connected\n");
             esp_mqtt_client_subscribe(event->client, TOPIC, 0);
             break;
 

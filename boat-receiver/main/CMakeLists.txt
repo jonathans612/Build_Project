@@ -7,4 +7,5 @@ idf_component_register(SRCS "boat_controller.c" "wifi_functions.c" "mqtt_functio
                             esp_wifi
                             wpa_supplicant
                             mqtt
+                            esp_driver_ledc
                        INCLUDE_DIRS "")
