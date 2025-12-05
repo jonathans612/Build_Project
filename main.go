@@ -8,32 +8,32 @@ import (
 	mqtt "github.com/eclipse/paho.mqtt.golang"
 )
 
-type Input = string
+type Input = byte
 
 const (
-	UP    Input = "up"
-	DOWN  Input = "down"
-	LEFT  Input = "left"
-	RIGHT Input = "right"
+	UP    Input = 'U'
+	DOWN  Input = 'D'
+	LEFT  Input = 'L'
+	RIGHT Input = 'R'
+	QUIT  Input = 'q'
 )
 
 func publish(input Input, client mqtt.Client) {
-	// 0 denotes minimum Quality of Service (QoS), fastest option
-	token := client.Publish("topic/control", 0, false, input)
+	token := client.Publish("web/initbuild2025/boat/movement", 0, false, []byte{input})
 	token.Wait()
 }
 
-func processKeystroke(key keys.Key, inputBuffer chan string) (stop bool, err error) {
+func processKeystroke(key keys.Key, inputBuffer chan byte) (stop bool, err error) {
 	switch key.Code {
 
-	// Exit on q
 	case keys.RuneKey:
 		if key.String() == "q" {
-			inputBuffer <- "q"
+			inputBuffer <- QUIT
 			return true, nil
 		}
-
-	// Process keys
+		if key.String() == "c" {
+			inputBuffer <- 'C'
+		}
 	case keys.Up:
 		inputBuffer <- UP
 	case keys.Down:
@@ -47,21 +47,19 @@ func processKeystroke(key keys.Key, inputBuffer chan string) (stop bool, err err
 	return false, nil
 }
 
-func processInput(inputBuffer chan string, client mqtt.Client) {
-	var input string
+func processInput(inputBuffer chan byte, client mqtt.Client) {
 	for {
-		input = <-inputBuffer
+		input := <-inputBuffer
 
-		if input == "q" {
+		if input == QUIT {
 			return
 		}
 
 		publish(input, client)
 	}
-
 }
 
-const BROKER_DNS = "localhost" // localhost for testing... switch to EC2 elsaticIP DNS name later
+const BROKER_DNS = "test.mosquitto.org"
 const PORT = 1883
 
 func main() {
@@ -80,7 +78,7 @@ func main() {
 		panic(token.Error())
 	}
 
-	inputBuffer := make(chan string, 30)
+	inputBuffer := make(chan byte, 30)
 
 	go processInput(inputBuffer, client)
 
@@ -92,10 +90,3 @@ func main() {
 	client.Disconnect(250)
 	fmt.Println("Exiting keystroke listener")
 }
-
-/*
- *		To listen, open shell and run
- *
- *			mosquitto_sub -h (DNS) -p 1883 -t "topic/control"
- *
- */
